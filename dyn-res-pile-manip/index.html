@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111713571-1"></script>
+	<script>
+  		window.dataLayer = window.dataLayer || [];
+  		function gtag(){dataLayer.push(arguments);}
+  		gtag('js', new Date());
+  		gtag('config', 'UA-111713571-1');
+	</script>
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<!-- Custom styles for this template -->
+	<link href="files/jumbotron.css" rel="stylesheet">
+</head>
+
+<title>dyn-res</title>
+
+<body>
+	<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+		<div class="container">
+		<a class="navbar-brand" href="#">Dynamic-Resolution Model Learning for Object Pile Manipulation</a>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle">
+	  		<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarToggle">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#Abstract">Abstract</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#Overview">Overview</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#Results">Results</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container" style="padding-top: 80px; font-size: 20px">
+		<div align="center">
+			<h2 class="text-center" align="center">
+				Dynamic-Resolution Model Learning for Object Pile Manipulation
+			</h2><br>
+
+            <a href="https://wangyixuan12.github.io/">Yixuan Wang</a><sup>*2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>*1,2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://krdc.web.illinois.edu/">Katherine Driggs-Campbell</a><sup>2</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://profiles.stanford.edu/fei-fei-li/">Li Fei-Fei</a><sup>1</sup> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="http://jiajunwu.com">Jiajun Wu</a><sup>1</sup><br><br>
+
+			<b><sup>1</sup>Stanford</b> &nbsp;&nbsp;&nbsp;&nbsp;
+			<b><sup>2</sup>UIUC</b><br>
+			<small>(* indicate equal contribution)</small><br><br>
+
+			<a style="color: royalblue; font-size: 18px;">[Paper: coming soon]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+			<a style="color: royalblue; font-size: 18px;">[Code: coming soon]</a><br><br>
+			
+			<img class="img-responsive img-rounded" src="./imgs/teaser.jpg" style="width:100%; height:100%" alt="">
+		</div>
+	</div><br><br>
+
+	<div class="container">
+		<h3 id="Abstract" style="padding-top: 80px; margin-top: -80px;">Abstract</h3>
+		<br>
+		Dynamics models learned from visual observations have shown to be effective in various robotic manipulation tasks. One of the key questions for learning such dynamics models is what scene representation to use. Prior works typically assume representation at a fixed dimension or resolution, which may be inefficient for simple tasks and ineffective for more complicated tasks. In this work, we investigate how to learn dynamic and adaptive representations at different levels of abstraction to achieve the optimal trade-off between efficiency and effectiveness. Specifically, we construct dynamic-resolution particle representations of the environment and learn a unified dynamics model using graph neural networks (GNNs) that allows continuous selection of the abstraction level. During test time, the agent can adaptively determine the optimal resolution at each model-predictive control (MPC) step. We evaluate our method in object pile manipulation, a task we commonly encounter in cooking, agriculture, manufacturing, and pharmaceutical applications. Through comprehensive evaluations both in the simulation and the real world, we show that our method achieves significantly better performance than state-of-the-art fixed-resolution baselines at the gathering, sorting, and redistribution of granular object piles made with various instances like coffee beans, almonds, corn, etc.
+		<br><br><br>
+
+		
+		<h3 id="Overview" style="padding-top: 80px; margin-top: -80px;">Overview</h3>
+		<br>
+			<img class="img-responsive img-rounded" src="./imgs/model.jpg" style="width:100%; height:100%" alt="">
+		<br><br><br><br>
+		
+		<h3 id="Results" style="padding-top: 80px; margin-top: -80px;" align="center">Results</h3>
+		<br>
+		<font size="4">
+			<center>
+			<a href="#Gather">Gather</a> |
+			<a href="#Redistribute">Redistribute</a> |
+			<a href="#Sort">Sort</a> |
+			<a href="#Disturbance">Disturbance</a>
+			</center>
+		</font> 
+		<br><br>
+		
+		<h4 style="padding-top: 80px; margin-top: -80px;" id="Gather" align="center">Gather the object pile into target location</h4>
+		<br>
+		<td align="center" width="1000px">
+			<center>
+				<iframe width="1000" height="563" src="https://youtube.com/embed/v8ItuOqxZnw"
+					title="[RSS 23] Dyn-Res Pile Manip (Gather 1)" frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+				<font size="4">
+				<div align="center">
+					Gather M&Ms into target location
+				</div>
+				</font>
+			</center>
+		</td>
+		<br><br>
+		
+		<!-- <h4 style="padding-top: 80px; margin-top: -80px;">Video 2: Gather the object pile into target location (example 2)</h4> -->
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/Xt7wVEcbFqE"
+				title="[RSS 23] Dyn-Res Pile Manip (Gather 2)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Gather object piles with different granularity and shapes into target location
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<h4 style="padding-top: 80px; margin-top: -80px;" id="Redistribute" align="center">Redistribute the object piles into complex target shapes</h4>
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/kYv_XDNlecM"
+				title="[RSS 23] Dyn-Res Pile Manip (Redistribute 1)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Redistribute the object pile into Letter G
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<!-- <h4 style="padding-top: 80px; margin-top: -80px;">Video 4: Redistribute the object piles into all letters</h4> -->
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/xOhXWqUnVjU"
+				title="[RSS 23] Dyn-Res Pile Manip (Redistribute 2)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Redistribute the object pile into all letters
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<!-- <h4 style="padding-top: 80px; margin-top: -80px;">Video 5: Redistribute the object piles into Chinese "Hello World"</h4> -->
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/KUxv1ddvakE"
+				title="[RSS 23] Dyn-Res Pile Manip (Chinese)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Redistribute the object pile into Chinese "Hello World"
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<!-- <h4 style="padding-top: 80px; margin-top: -80px;">Video 6: Gather the object pile into Japanese "Hello"</h4> -->
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/d2Gc5gtQ6rY"
+				title="[RSS 23] Dyn-Res Pile Manip (Japanese)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Redistribute the object pile into Japanese "Hello"
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<h4 style="padding-top: 80px; margin-top: -80px;" id="Sort" align="center">Sort two object piles to target locations without mixing</h4>
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/wJ_Gqtm5lUQ"
+				title="[RSS 23] Dyn-Res Pile Manip (Sort 1)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Sort coffee beans and candies to target locations without mixing
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<!-- <h4 style="padding-top: 80px; margin-top: -80px;">Video 8: Sort two object piles to target locations without mixing (example 2)</h4> -->
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/4fX5wTyLFNk"
+				title="[RSS 23] Dyn-Res Pile Manip (Sort 2)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			<font size="4">
+			<div align="center">
+				Sort object piles with different granularity and shapes to target locations without mixing
+			</div>
+			</font>
+			</center>
+		</td>
+		<br><br>
+
+		<h4 style="padding-top: 80px; margin-top: -80px;" id="Disturbance" align="center">Push object piles into target locations under external disturbance</h4>
+		<br>
+		<td align="center" width="1000px">
+			<center>
+			<iframe width="1000" height="563" src="https://youtube.com/embed/6aknG58DzLo"
+				title="[RSS 23] Dyn-Res Pile Manip (Disturbance)" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen>
+			</iframe>
+			</center>
+		</td>
+		<br><br>
+	</div><br>
+
+	<!-- Bootstrap core JavaScript -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
