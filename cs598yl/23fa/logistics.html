@@ -32,13 +32,14 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+	    <div class="container">
       <a class="navbar-brand" href="index.html">CS598YL - Fall 2023</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse" id="navbarToggle">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="logistics.html">Logistics</a>
             </li>
@@ -49,6 +50,7 @@
               <a class="nav-link" href="project.html">Course Project</a>
             </li>
           </ul>
+      </div>
       </div>
     </nav>
 
@@ -75,10 +77,10 @@
             <div class="row">
               <div class="col-md-12">
                 <h4>Grading Policy</h4>
-                TBD (TBD%)<br>
-                TBD (TBD%)<br>
-                TBD (TBD%)<br>
-                TBD (TBD%)
+                Paper reviews (20%)<br>
+                Student presentation (20%)<br>
+                Course project (50%)<br>
+                In-class participation (10%)
               </div>
             </div>
           </div>
@@ -91,31 +93,26 @@
           <div class="section">
             <div class="row">
               <div class="col-md-12">
-                <h4>Student Presentations</h4>
-                TBD
-                <br><br>
-                <strong>Useful Resources</strong>
-                <ul>
-                    TBD
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> <!-- bg-highlight -->
-
-      <div class="bg-no-highlight">
-        <div class="container">
-          <div class="section"></div>
-          <div class="section">
-            <div class="row">
-              <div class="col-md-12">
                 <h4>Paper Reviews</h4>
-                TBD
-                <br><br>
+                There will be two papers presented in each class. You need to pick 10 papers among them to write reviews. The reviews are graded based on the level of understanding and critical analysis of the work. Here are information about paper review:
+                <ul>
+                  <li>Due: 11:59pm the previous night for each class of student presentations (11:59pm Tue and 11:59pm Thur)</li>
+                  <li>Submission: <a href="https://forms.gle/yxPqr8njDyUYqDvWA">Google Form</a></li>
+                  <li>Grading: 20% of the total grade, each review worth 2% of total grade</li>
+                  <ul>
+                    <li>Do not use ChatGPT to generate reviews</li>
+                    <li>Focus on weakness and failure cases you come up with</li>
+                    <li>Score will only be P/F</li>
+                    <li>In the case when more than 10 reviews are submitted by a student, we will take the top-scored 10 for grading.</li>
+                  </ul>
+                  <li>Late submission: Late submission is not accepted</li>
+                </ul>
+                <br>
                 <strong>Useful Resources</strong>
                 <ul>
-                    TBD
+                  <li><a href="https://cs.uwaterloo.ca/~smann/Research/review-conference.txt">Reviewing a CS Conference Paper</a>, Stephen Mann</li>
+                  <li><a href="https://www.dropbox.com/s/725p60wcajbb8xh/How%20to%20Review%20for%20CVPR.pptx?dl=0">How to Write Good Reviews for CVPR</a>, CVPR 2019 Program Chairs</li>
+                  <!-- <li>Example reviews from the <a href="https://openreview.net/group?id=ICLR.cc">ICLR</a> and <a href="https://papers.nips.cc/paper/2020">NeurIPS</a> conferences.</li> -->
                 </ul>
               </div>
             </div>
@@ -123,6 +120,40 @@
         </div>
       </div> <!-- bg-no-highlight -->
 
+      <div class="bg-no-highlight">
+        <div class="container">
+          <div class="section"></div>
+          <div class="section">
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Student Presentations</h4>
+                Each student should expect to have one presentation regarding their assigned paper readings. Each class will consist of two presentations. Here are the information about the presentation:
+                <ul>
+                  <li>Due: 7 days prior the presentation day (i.e. 11:59PM Tue if presenting on next Wed and 11:59PM Thur if presenting on next Fri)</li>
+                  <li>Format: 25 mins presentation + 5 mins Q&A + 10 mins open discussion</li>
+                  <li>Submission: email the slides to the TAs and the instructor with title “[CS598YL Pre] NAME”</li>
+                  <li>Grading: 20% of the total grade</li>
+                  <ul>
+                    <li>Present clearly and concisely (4%) </li>
+                    <li>prior works and identify the problem addressed by the paper (4%)</li>
+                    <li>Analyze the strengths and weaknesses of the paper (4%)</li>
+                    <li>Discuss future research directions (4%)</li>
+                    <li>Respond to questions and engage in open-ended discussion (4%)</li>
+                  </ul>
+                  <li>Late submission: Failures to email the slides on time would incur a 20% deduction on the presentation score</li>
+                </ul>
+                <br>
+                <strong>Useful Resources</strong>
+                <ul>
+                  <li><a href="http://graphics.stanford.edu/~kayvonf/misc/cleartalktips.pdf">Tips for Giving Clear Talks</a>, Kayvon Fatahalian</li>
+                  <li><a href="https://www.sciencemag.org/careers/2019/04/three-tips-giving-great-research-talk">Three Tips for Giving a Great Research Talk</a>, Lewis, Gruber, Van Bavel, Somerville</li>
+                  <!-- <li><a href="https://sites.google.com/robot-learning.org/corl2019">CoRL 2019</a> talk videos (<a href="https://www.youtube.com/watch?v=glMwF5-q51E">day 1</a>, <a href="https://www.youtube.com/watch?v=b7StSnt85S4">day 2</a>, <a href="https://www.youtube.com/watch?v=QaCuEv_7lfs">day 3</a>) and <a href="https://www.youtube.com/playlist?list=PLG0LjilbrcCYuIfqIkDMR5FndmKIXJsb9">RSS 2023</a> talk videos</li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- bg-highlight -->
 
       <div class="bg-highlight">
         <div class="container">
@@ -131,11 +162,13 @@
             <div class="row">
               <div class="col-md-12">
                 <h4>Course Project</h4>
-                TBD
+                The course project aims to help the students gain hands-on experiences in robot learning. For more detail, please see the <a href="project.html">Project</a> page.
                 <br><br>
                 <strong>Useful Resources</strong>
                 <ul>
-                    TBD
+                  <li><a href="https://online.stanford.edu/courses/som-ysciewrite-writing-sciences">Writing in the Sciences</a>, Kristin Sainani (<a href="https://www.coursera.org/learn/sciwrite">Coursera</a>, <a href="https://www.youtube.com/channel/UC-wb-n89yM0lBiP2QltsDaA">YouTube</a>)</li>
+                  <li><a href="https://billf.mit.edu/sites/default/files/documents/cvprPapers.pdf">How to Write a Good CVPR Submission</a>, Bill Freeman</li>
+                  <li><a href="https://www.nature.com/articles/d41586-019-02918-5">Novelist Cormac McCarthy’s Tips on How to Write a Great Science Paper</a>, Van Savage, Pamela Yeh</li>
                 </ul>
               </div>
             </div>
@@ -143,26 +176,35 @@
         </div>
       </div> <!-- bg-highlight -->
 
-      <!-- <div class="bg-no-highlight">
+      <div class="bg-no-highlight">
         <div class="container">
           <div class="section"></div>
           <div class="section">
             <div class="row">
               <div class="col-md-12">
-                <h4>Classroom Safety and COVID-19</h4>
-                <p>To help preserve our in person learning environment, the university recommends the following.</p>
-                <ul>
-                  <li>Adhere to university <a href="https://utexas.app.box.com/s/ymob0b4vimv4j9gnhskpsqywwadk3f10">mask guidance</a>.</li>
-                  <li><a href="https://uthealthaustin.org/patient-resources/covid-19-updates/covid-19-vaccination">Vaccinations are widely available</a>, free and not billed to health insurance. The vaccine will help protect against the transmission of the virus to others and reduce serious symptoms in those who are vaccinated.</li>
-                  <li><a href="https://healthyhorns.utexas.edu/coronavirus_proactive_testing.html">Proactive Community Testing</a> remains an important part of the university’s efforts to protect our community. Tests are fast and free.</li>
-                  <li>Visit <a href="https://protect.utexas.edu/">protect.utexas.edu</a> for more information</li>
-                </ul>
+                <h4>In-class participation</h4>
+                <p>Students are encouraged to partipate in discussion and in-class interaction. Participation totally worth 10% of total grade. Each in-class interaction or Campuswire interaction (i.e. raising and answring questions) worth 1% of total grade.</p>
+                <p>The use of artificial intelligence tools (such as ChatGPT) in this class hall be permitted on a limited basis. AI writing tools can only be used for grammar checking, spelling fixing, and language polishing. They should not be used to replace your critical thinking and idea generation. You are also welcome to seek my prior-approval to use these tools on any assignment. In either instance, AI writing tools should be used with caution and proper citation, as the use of AI should be properly attributed.</p>
               </div>
             </div>
           </div>
 
         </div>
-      </div> -->
+      </div>
+
+      <div class="bg-highlight">
+        <div class="container">
+          <div class="section"></div>
+          <div class="section">
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Academic Integrity</h4><p>All work that you submit should be written solely by you and your group, and you should cite any significant sources of ideas. If any part of your project builds upon efforts before the semester (e.g., your ongoing research project), be sure to discuss with the instructor in advance. Plagiarism and other integrity violations will go on record at the university, and the minimum penalty will be a zero for the entire assignment. See the <a href="https://studentcode.illinois.edu/">student code</a> for more information on what constitutes an academic integrity violation.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
 
       <div class="bg-no-highlight">
         <div class="container">
@@ -170,26 +212,8 @@
           <div class="section">
             <div class="row">
               <div class="col-md-12">
-                <h4>Academic Integrity</h4>
-                <p>TBD</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="row">
-              <div class="col-md-12">
-                <h4>Notice about students with disabilities</h4>
-                <p>TBD</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="section">
-            <div class="row">
-              <div class="col-md-12">
-                <h4>Notice about missed work due to religious holy days</h4>
-                <p>TBD</p>
+                <h4>Acccommodations</h4>
+                <p>To obtain disability-related academic adjustments and/or auxiliary aids, students should contact both the instructor and the Disability Resources and Educational Services (DRES) as soon as possible. You can contact DRES at 1207 S. Oak Street, Champaign, IL 61820, (217) 333-1970, or via email at disability@illinois.edu.</p>
               </div>
             </div>
           </div>

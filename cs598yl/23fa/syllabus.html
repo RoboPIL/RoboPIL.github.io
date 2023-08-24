@@ -33,13 +33,14 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+	    <div class="container">
       <a class="navbar-brand" href="index.html">CS598YL - Fall 2023</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button> -->
 
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
+      <div class="collapse navbar-collapse" id="navbarToggle">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="logistics.html">Logistics</a>
             </li>
@@ -50,6 +51,7 @@
               <a class="nav-link" href="project.html">Course Project</a>
             </li>
           </ul>
+      </div>
       </div>
     </nav>
 
@@ -66,7 +68,7 @@
             <div class="row">
               <div class="col-md-12">
                 <h4>Schedule</h4>
-                <i>TBD</i><br>Readings: &#9679; required &nbsp; &#9632; required (no review) &nbsp; &#9675; optional
+                Readings: &#9679; required &nbsp; &#9675; optional
                 <br><br>
                 <!-- <h6>Note: The reading list is subject to change prior to the start of the course.</h6> -->
                 <div class="row" style="margin-top:20px;">
@@ -96,7 +98,7 @@
 
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 1</strong><br>Fri, Aug 25</td>
-                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Overview of Computer Vision</p>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Computer Vision Basics</p>
                           <!-- <ul class="optional-reading">
                             <li class="no-review"><a href="https://arxiv.org/abs/1804.06557">The Limits and Potentials of Deep Learning for Robotics</a>. Niko Sünderhauf, Oliver Brock, Walter Scheirer, Raia Hadsell, Dieter Fox, Jürgen Leitner, Ben Upcroft, Pieter Abbeel, Wolfram Burgard, Michael Milford, Peter Corke (2018)</li>
                             <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/12239892">A Sensorimotor Account of Vision and Visual Consciousness</a>. Kevin O'Regan and Alva Noë (2001)</li>
@@ -112,7 +114,7 @@
 
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 2</strong><br>Wed, Aug 30</td>
-                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Overview of Robotics</p>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Robotics Basics</p>
                         </td>
                         <td class="presenters-cell">
                           <!-- Shuhan<br>Shivang -->
@@ -124,7 +126,7 @@
 
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 2</strong><br>Fri, Sept 1</td>
-                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Overview of Machine Learning</p>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Machine Learning Basics</p>
                         </td>
                         <td class="presenters-cell">
                           <!-- Liangchen<br>Xingchao -->
@@ -140,14 +142,14 @@
 
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 3</strong><br>Wed, Sept 6</td>
-                          <td class="topic-cell"><p>2D Visual Recognition</p>
+                          <td class="topic-cell"><p>2D Perception</p>
                             <ul>
-                              <li><a href="https://arxiv.org/abs/1506.02640">You Only Look Once: Unified, Real-Time Object Detection</a>. Joseph Redmon, Santosh Divvala, Ross Girshick, Ali Farhadi (2015)</li>
+                              <li><a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a>. Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin (2021)</li>
                               <li><a href="https://arxiv.org/abs/2304.02643">Segment Anything</a>. Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, Ross Girshick (2023)</li>
                             </ul>
                             <ul class="optional-reading">
-                              <li><a href="https://arxiv.org/abs/2005.12872">End-to-End Object Detection with Transformers</a>. Nicolas Carion, Francisco Massa, Gabriel Synnaeve, Nicolas Usunier, Alexander Kirillov, Sergey Zagoruyko (2020)</li>
                               <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a>. Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick (2017)</li>
+                              <li><a href="https://arxiv.org/abs/2304.07193">DINOv2: Learning Robust Visual Features without Supervision</a>. Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma, Gabriel Synnaeve, Hu Xu, Hervé Jegou, Julien Mairal, Patrick Labatut, Armand Joulin, Piotr Bojanowski (2023)</li>
                             </ul>
                         </td>
                         <td class="presenters-cell">
@@ -160,14 +162,14 @@
                       
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 3</strong><br>Fri, Sept 8</td>
-                        <td class="topic-cell"><p>3D Data Processing</p>
+                        <td class="topic-cell"><p>3D Perception</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1706.02413">PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space</a>. Charles R. Qi, Li Yi, Hao Su, Leonidas J. Guibas (2017)</li>
-                            <li><a href="https://arxiv.org/abs/1801.07829">Dynamic Graph CNN for Learning on Point Clouds</a>. Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, Justin M. Solomon (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1711.00199">PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes</a>. Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox (2018)</li>
                           </ul>
                           <ul class="optional-reading">
-                            <li><a href="https://arxiv.org/abs/1812.05784">PointPillars: Fast Encoders for Object Detection from Point Clouds (2019)</a>. Alex H. Lang, Sourabh Vora, Holger Caesar, Lubing Zhou, Jiong Yang, Oscar Beijbom (2019)</li>
-                            <li><a href="https://arxiv.org/abs/1801.07791">PointCNN: Convolution On X-Transformed Points</a>. Yangyan Li, Rui Bu, Mingchao Sun, Wei Wu, Xinhan Di, Baoquan Chen (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1801.07829">Dynamic Graph CNN for Learning on Point Clouds</a>. Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, Justin M. Solomon (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1804.00175">DeepIM: Deep Iterative Matching for 6D Pose Estimation</a>. Yi Li, Gu Wang, Xiangyang Ji, Yu Xiang, Dieter Fox (2018)</li>
                           </ul>
                         </td>
                         <td class="presenters-cell">
@@ -183,13 +185,11 @@
                         <td class="topic-cell"><p>Representation Learning for Robotics</p>
                         <ul>
                           <li><a href="https://arxiv.org/abs/1806.08756">Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation</a>. Peter R. Florence, Lucas Manuelli, Russ Tedrake (2018)</li>
-                          <li><a href="https://arxiv.org/abs/2009.05085">Keypoints into the Future: Self-Supervised Correspondence in Model-Based Reinforcement Learning</a>. Lucas Manuelli, Yunzhu Li, Pete Florence, Russ Tedrake (2020)</li>
                           <li><a href="https://arxiv.org/abs/2203.12601">R3M: A Universal Visual Representation for Robot Manipulation</a>. Suraj Nair, Aravind Rajeswaran, Vikash Kumar, Chelsea Finn, Abhinav Gupta (2022)</li>
                         </ul>
                         <ul class=optional-reading>
                           <li><a href="https://arxiv.org/abs/1911.05722">Momentum Contrast for Unsupervised Visual Representation Learning</a>. Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, Ross Girshick (2019)</li>
                           <li><a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a>. Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin (2021)</li>
-                          <!-- <li><a href="https://arxiv.org/abs/1906.11883">Unsupervised Learning of Object Keypoints for Perception and Control</a>. Tejas Kulkarni, Ankush Gupta, Catalin Ionescu, Sebastian Borgeaud, Malcolm Reynolds, Andrew Zisserman, Volodymyr Mnih (2019)</li> -->
                         </ul>
                         </td>
                         <td class="presenters-cell">
@@ -202,14 +202,15 @@
 
                       <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 4</strong><br>Fri, Sept 15</td>
-                        <td class="topic-cell"><p>Dynamics Learning for Robotics</p>
+                        <td class="topic-cell"><p>Model Learning for Robotics</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1810.01566">Learning Particle Dynamics for Manipulating Rigid Bodies, Deformable Objects, and Fluids</a>. Yunzhu Li, Jiajun Wu, Russ Tedrake, Joshua B. Tenenbaum, Antonio Torralba (2019)</li>
-                            <li><a href="https://arxiv.org/abs/2205.02909">RoboCraft: Learning to See, Simulate, and Shape Elasto-Plastic Objects with Graph Networks</a>. Haochen Shi, Huazhe Xu, Zhiao Huang, Yunzhu Li, Jiajun Wu (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2010.03409">Learning Mesh-Based Simulation with Graph Networks</a>. Tobias Pfaff, Meire Fortunato, Alvaro Sanchez-Gonzalez, Peter W. Battaglia (2020)</li>
                           </ul>
                           <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/pdf/2206.02881.pdf">Mesh-based dynamics with occlusion reasoning for cloth manipulation</a>. Zixuan Huang, Xingyu Lin, David Held (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2306.14447">RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</a>. Haochen Shi, Huazhe Xu, Samuel Clarke, Yunzhu Li, Jiajun Wu (2023)</li>
                             <li><a href="https://arxiv.org/abs/2306.16700">Dynamic-Resolution Model Learning for Object Pile Manipulation</a>. Yixuan Wang*, Yunzhu Li*, Katherine Driggs-Campbell, Li Fei-Fei, Jiajun Wu (2023)</li>
-                            <li><a href="https://arxiv.org/abs/2104.01542">Visual Grounding of Learned Physical Models</a>. Yunzhu Li, Toru Lin, Kexin Yi, Daniel M. Bear, Daniel L. K. Yamins, Jiajun Wu, Joshua B. Tenenbaum, Antonio Torralba (2020)</li>
                           </ul>
                         </td>
                         <td class="presenters-cell">
@@ -224,13 +225,12 @@
                         <td class="date-cell"><strong>Week 5</strong><br>Wed, Sept 20</td>
                         <td class="topic-cell"><p>Neural Fields</p>
                           <ul>
-                            <li><a href="https://arxiv.org/abs/2107.04004">3D Neural Scene Representations for Visuomotor Control</a>. Yunzhu Li, Shuang Li, Vincent Sitzmann, Pulkit Agrawal, Antonio Torralba (2021)</li>
                             <li><a href="https://arxiv.org/abs/2202.11855">Learning Multi-Object Dynamics with Compositional Neural Radiance Fields</a>. Danny Driess, Zhiao Huang, Yunzhu Li, Russ Tedrake, Marc Toussaint (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2104.01542">Synergies Between Affordance and Geometry: 6-DoF Grasp Detection via Implicit Representations</a>. Zhenyu Jiang, Yifeng Zhu, Maxwell Svetlik, Kuan Fang, Yuke Zhu (2021)</li>
                           </ul>
                           <ul class=optional-reading>
                             <li><a href="https://edgarsucar.github.io/iMAP/">iMAP: Implicit Mapping and Positioning in Real-Time</a>. Edgar Sucar, Shikun Liu, Joseph Ortiz, Andrew J. Davison (2021)</li>
-                            <li><a href="https://arxiv.org/abs/2104.01542">Synergies Between Affordance and Geometry: 6-DoF Grasp Detection via Implicit Representations</a>. Zhenyu Jiang, Yifeng Zhu, Maxwell Svetlik, Kuan Fang, Yuke Zhu (2021)</li>
-                            <li><a href="https://arxiv.org/abs/2112.12130">NICE-SLAM: Neural Implicit Scalable Encoding for SLAM</a>. Zihan Zhu, Songyou Peng, Viktor Larsson, Weiwei Xu, Hujun Bao, Zhaopeng Cui, Martin R. Oswald, Marc Pollefeys (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2107.04004">3D Neural Scene Representations for Visuomotor Control</a>. Yunzhu Li, Shuang Li, Vincent Sitzmann, Pulkit Agrawal, Antonio Torralba (2021)</li>
                           </ul>
                         </td>
                         <td class="presenters-cell">
@@ -246,12 +246,11 @@
                         <td class="topic-cell"><p>Multimodal Perception</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1810.10191">Making Sense of Vision and Touch: Self-Supervised Learning of Multimodal Representations for Contact-Rich Tasks</a>. Michelle A. Lee*, Yuke Zhu*, Krishnan Srinivasan, Parth Shah, Silvio Savarese, Li Fei-Fei, Animesh Garg, Jeannette Bohg (2018)</li>
-                            <!-- <li><a href="https://arxiv.org/abs/1912.11474">Audio-Visual Embodied Navigation</a>. Changan Chen, Unnat Jain, Carl Schissler, Sebastia Vicenc Amengual Gari, Ziad Al-Halah, Vamsi Krishna Ithapu, Philip Robinson, Kristen Grauman (2019)</li> -->
-                            <li><a href="https://arxiv.org/abs/1906.06322">Connecting Touch and Vision via Cross-Modal Prediction</a>. Yunzhu Li, Jun-Yan Zhu, Russ Tedrake, Antonio Torralba (2019)</li>
+                            <li><a href="https://arxiv.org/abs/2101.11812">SwingBot: Learning Physical Features from In-hand Tactile Exploration for Dynamic Swing-up Manipulation</a>. Chen Wang, Shaoxiong Wang, Branden Romero, Filipe Veiga, Edward Adelson (2021)</li>
                           </ul>
                           <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1910.02860">Cable Manipulation with a Tactile-Reactive Gripper</a> Yu She, Shaoxiong Wang, Siyuan Dong, Neha Sunil, Alberto Rodriguez, Edward Adelson (2019)</li>
                             <li><a href="https://arxiv.org/pdf/1805.11085">More Than a Feeling: Learning to Grasp and Regrasp Using Vision and Touch</a>. Roberto Calandra, Andrew Owens, Dinesh Jayaraman, Justin Lin, Wenzhen Yuan, Jitendra Malik, Edward H. Adelson, Sergey Levine (2018)</li>
-                            <li><a href="https://arxiv.org/abs/2204.02389">ObjectFolder 2.0: A Multisensory Object Dataset for Sim2Real Transfer</a>. Ruohan Gao, Zilin Si, Yen-Yu Chang, Samuel Clarke, Jeannette Bohg, Li Fei-Fei, Wenzhen Yuan, Jiajun Wu (2022)</li>  
                           </ul>
                         </td>
                         <td class="presenters-cell">
@@ -262,7 +261,7 @@
                         </td>
                       </tr>
                       
-                      <tr class="schedule-row">
+                      <!-- <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 6</strong><br>Wed, Sept 27</td>
                         <td class="topic-cell"><p>State Estimation</p>
                           <ul>
@@ -275,15 +274,15 @@
                           </ul>
                         </td>
                         <td class="presenters-cell">
-                          <!-- Gunjan<br>Jay -->
+                          Gunjan<br>Jay
                         </td>
                         <td class="notes-cell">
-                          <!-- <a href="slides/pre_09-14_Gunjan.pdf">[talk #1]</a><br><a href="slides/pre_09-14_Jay.pdf">[talk #2]</a> -->
+                          <a href="slides/pre_09-14_Gunjan.pdf">[talk #1]</a><br><a href="slides/pre_09-14_Jay.pdf">[talk #2]</a>
                         </td>
-                      </tr>
+                      </tr> -->
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 6</strong><br>Fri, Sept 29</td>
+                        <td class="date-cell"><strong>Week 6</strong><br>Wed, Sept 27</td>
                         <!-- <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Overview of Robot Decision Making</p> -->
                         <td class="topic-cell"><p>Visual Tracking</p>
                           <ul>
@@ -304,26 +303,14 @@
                           <!-- <a href="slides/lecture_robot_decision_making.pdf">[slides]</a> -->
                         </td>
                       </tr>
-
+                      
                       <tr class="schedule-row chapter-row">
                         <td class="date-cell" colspan="5" style="text-align:center;"><strong>Part II: Robot Decision Making</strong></td>
                       </tr>
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 7</strong><br>Wed, Oct 4</td>
-                        <td class="topic-cell"><p>IROS</p>
-                        </td>
-                        <td class="presenters-cell">
-                          <!-- Amit<br>Carlos -->
-                        </td>
-                        <td class="notes-cell"><br>
-                          <!-- <a href="slides/pre_10-21_Amit.pdf">[talk #1]</a><br><a href="slides/pre_10-21_Carlos.pdf">[talk #2]</a> -->
-                        </td>
-                      </tr>
-
-                      <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 7</strong><br>Fri, Oct 6</td>
-                        <td class="topic-cell"><p>Model-free Reinforcement Learning</p>
+                        <td class="date-cell"><strong>Week 6</strong><br>Fri, Sept 29</td>
+                        <td class="topic-cell"><p>Model-Free Reinforcement Learning</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1502.05477">Trust Region Policy Optimization</a>. John Schulman, Sergey Levine, Philipp Moritz, Michael I. Jordan, Pieter Abbeel (2015)</li>
                             <li><a href="https://arxiv.org/abs/1812.05905">Soft Actor-Critic Algorithms and Applications</a>. Tuomas Haarnoja, Aurick Zhou, Kristian Hartikainen, George Tucker, Sehoon Ha, Jie Tan, Vikash Kumar, Henry Zhu, Abhishek Gupta, Pieter Abbeel, Sergey Levine (2018)</li>
@@ -342,13 +329,26 @@
                       </tr>
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 8</strong><br>Wed, Oct 11</td>
-                        <td class="topic-cell"><p>Model-based Reinforcement Learning</p>
+                        <td class="date-cell"><strong>Week 7</strong><br>Wed, Oct 4</td>
+                        <td class="topic-cell"><p>No Class - Attending Conference</p>
+                        </td>
+                        <td class="presenters-cell">
+                          <!-- Amit<br>Carlos -->
+                        </td>
+                        <td class="notes-cell"><br>
+                          <!-- <a href="slides/pre_10-21_Amit.pdf">[talk #1]</a><br><a href="slides/pre_10-21_Carlos.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 7</strong><br>Wed, Oct 6</td>
+                        <td class="topic-cell"><p>Model-Based Reinforcement Learning</p>
                           <ul>
-                            <li><a href="https://arxiv.org/abs/1912.01603">Dream to Control: Learning Behaviors by Latent Imagination</a>. Danijar Hafner, Timothy Lillicrap, Jimmy Ba, Mohammad Norouzi (2019)</li>
+                            <li><a href="https://arxiv.org/abs/2206.14176">DayDreamer: World Models for Physical Robot Learning</a>. Philipp Wu, Alejandro Escontrela, Danijar Hafner, Ken Goldberg, Pieter Abbeel (2022)</li>
                             <li><a href="https://rse-lab.cs.washington.edu/papers/robot-rl-rss-11.pdf">Learning to Control a Low-Cost Manipulator using Data-Efficient Reinforcement Learning</a>. Marc Deisenroth, Carl Edward Rasmussen, Dieter Fox (2012)</li>
                           </ul>
                           <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1912.01603">Dream to Control: Learning Behaviors by Latent Imagination</a>. Danijar Hafner, Timothy Lillicrap, Jimmy Ba, Mohammad Norouzi (2019)</li>
                             <li><a href="https://arxiv.org/abs/1610.00696">Deep Visual Foresight for Planning Robot Motion</a>. Chelsea Finn, Sergey Levine (2016)</li>
                             <li><a href="https://arxiv.org/abs/1907.02057">Benchmarking Model-Based Reinforcement Learning</a>. Tingwu Wang, Xuchan Bao, Ignasi Clavera, Jerrick Hoang, Yeming Wen, Eric Langlois, Shunshi Zhang, Guodong Zhang, Pieter Abbeel, Jimmy Ba (2019)</li>
                           </ul>
@@ -361,7 +361,7 @@
                         </td>
                       </tr>
 
-                      <tr class="schedule-row">
+                      <!-- <tr class="schedule-row">
                         <td class="date-cell"><strong>Week 8</strong><br>Fri, Oct 13</td>
                         <td class="topic-cell"><p>Model-Predictive Control</p>
                           <ul>
@@ -373,23 +373,25 @@
                           </ul>
                         </td>
                         <td class="presenters-cell">
-                          <!-- Puyuan<br>Zizhao -->
+                          Puyuan<br>Zizhao
                         </td>
                         <td class="notes-cell">
-                          <!-- <a href="slides/pre_10-12_Puyuan.pdf">[talk #1]</a><br><a href="slides/pre_10-12_Zizhao.pdf">[talk #2]</a> -->
+                          <a href="slides/pre_10-12_Puyuan.pdf">[talk #1]</a><br><a href="slides/pre_10-12_Zizhao.pdf">[talk #2]</a>
                         </td>
-                      </tr>
+                      </tr> -->
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 9</strong><br>Wed, Oct 18</td>
+                        <td class="date-cell"><strong>Week 8</strong><br>Wed, Oct 11</td>
                         <td class="topic-cell"><p>Imitation Learning</p>
                           <ul>
-                            <li><a href="https://arxiv.org/abs/1011.0686">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</a>. Stéphane Ross, Geoffrey Gordon, and Drew Bagnell (2010)</li>
-                            <li><a href="https://arxiv.org/abs/1709.07174">Agile Autonomous Driving using End-to-End Deep Imitation Learning</a>. Yunpeng Pan, Ching-An Cheng, Kamil Saigol, Keuntaek Lee, Xinyan Yan, Evangelos A. Theodorou, and Byron Boots (2017)</li>
+                            <!-- IBC -->
+                            <li><a href="https://arxiv.org/abs/2109.00137">Implicit Behavioral Cloning</a>. Pete Florence, Corey Lynch, Andy Zeng, Oscar Ramirez, Ayzaan Wahid, Laura Downs, Adrian Wong, Johnny Lee, Igor Mordatch, Jonathan Tompson (2021)</li>
+                            <li><a href="https://arxiv.org/abs/2303.04137">Diffusion Policy: Visuomotor Policy Learning via Action Diffusion</a>. Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin Burchfiel, Shuran Song (2023)</li>
                           </ul>
                           <ul class=optional-reading>
                             <li><a href="https://arxiv.org/abs/1710.04615">Deep Imitation Learning for Complex Manipulation Tasks from Virtual Reality Teleoperation</a>. Tianhao Zhang, Zoe McCarthy, Owen Jow, Dennis Lee, Xi Chen, Ken Goldberg, Pieter Abbeel (2017)</li>
-                            <li><a href="https://arxiv.org/abs/2303.04137">Diffusion Policy: Visuomotor Policy Learning via Action Diffusion</a>. Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin Burchfiel, Shuran Song (2023)</li>
+                            <li><a href="https://arxiv.org/abs/1011.0686">A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning</a>. Stéphane Ross, Geoffrey Gordon, and Drew Bagnell (2010)</li>
+                            <li><a href="https://arxiv.org/abs/1709.07174">Agile Autonomous Driving using End-to-End Deep Imitation Learning</a>. Yunpeng Pan, Ching-An Cheng, Kamil Saigol, Keuntaek Lee, Xinyan Yan, Evangelos A. Theodorou, and Byron Boots (2017)</li>
                           </ul>
                         </td>
                         <td class="presenters-cell">
@@ -420,7 +422,7 @@
                       </tr> -->
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 9</strong><br>Fri, Oct 20</td>
+                        <td class="date-cell"><strong>Week 8</strong><br>Fri, Oct 13</td>
                         <td class="topic-cell"><p>Human-in-the-Loop Learning</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/2211.08416">Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment</a>. Huihan Liu, Soroush Nasiriany, Lance Zhang, Zhiyao Bao, Yuke Zhu (2022)</li>
@@ -439,8 +441,7 @@
                         </td>
                       </tr>
 
-                      <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 10</strong><br>Wed, Oct 25</td>
+                      <!-- <tr class="schedule-row">
                         <td class="topic-cell"><p>Learning to Learn</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1611.02779">RL^2: Fast Reinforcement Learning via Slow Reinforcement Learning</a>. Yan Duan, John Schulman, Xi Chen, Peter L. Bartlett, Ilya Sutskever, Pieter Abbeel (2016)</li>
@@ -455,13 +456,13 @@
                           <br>
                         </td>
                         <td class="notes-cell">
-                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a>
-                          <br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                          <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a>
+                          <br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a>
                         </td>
-                      </tr>
+                      </tr> -->
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 10</strong><br>Fri, Oct 27</td>
+                        <td class="date-cell"><strong>Week 9</strong><br>Wed, Oct 18</td>
                         <td class="topic-cell"><p>Task and Motion Planning</p>
                           <ul>
                             <li><a href="https://people.csail.mit.edu/lpk/papers/hpnICRA11Final.pdf">Hierarchical Task and Motion Planning in the Now</a>. Leslie Pack Kaelbling, Tomás Lozano-Pérez (2011)</li>
@@ -502,15 +503,59 @@
                       </tr> -->
 
                       <tr class="schedule-row chapter-row">
-                        <td class="date-cell" colspan="5" style="text-align:center;"><strong>Part III: Research Frontiers</strong></td>
+                        <td class="date-cell" colspan="5" style="text-align:center;"><strong>Part III: Cutting-edge topics</strong></td>
+                      </tr>
+
+                      <!-- topic: embodied AI env -->
+                      <!-- req: behavior; habitat -->
+                      <!-- optional: AI2THOR; Proc THOR (procedure one) -->
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 9</strong><br>Fri, Oct 20</td>
+                        <td class="topic-cell"><p>Embodied AI Benchmark</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2108.03332">BEHAVIOR: Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments</a>.  Sanjana Srivastava, Chengshu Li, Michael Lingelbach, Roberto Martín-Martín, Fei Xia, Kent Vainio, Zheng Lian, Cem Gokmen, Shyamal Buch, C. Karen Liu, Silvio Savarese, Hyowon Gweon, Jiajun Wu, Li Fei-Fei (2021)</li>
+                            <li><a href="https://arxiv.org/abs/1904.01201">Habitat: A Platform for Embodied AI Research</a>. Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi Parikh, Dhruv Batra (2019)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1712.05474">AI2-THOR: An Interactive 3D Environment for Visual AI</a>. Eric Kolve, Roozbeh Mottaghi, Winson Han, Eli VanderBilt, Luca Weihs, Alvaro Herrasti, Matt Deitke, Kiana Ehsani, Daniel Gordon, Yuke Zhu, Aniruddha Kembhavi, Abhinav Gupta, Ali Farhadi (2017)</li>
+                            <li><a href="https://arxiv.org/abs/2206.06994">ProcTHOR: Large-Scale Embodied AI Using Procedural Generation</a>. Matt Deitke, Eli VanderBilt, Alvaro Herrasti, Luca Weihs, Jordi Salvador, Kiana Ehsani, Winson Han, Eric Kolve, Ali Farhadi, Aniruddha Kembhavi, Roozbeh Mottaghi (2022)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          <!-- Zifan<br>Steven -->
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
                       </tr>
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 11</strong><br>Wed, Nov 1</td>
+                        <td class="date-cell"><strong>Week 10</strong><br>Wed, Oct 25</td>
+                        <td class="topic-cell"><p>Dextourous Manipulation</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1808.00177">Learning Dexterous In-Hand Manipulation</a>. OpenAI, Marcin Andrychowicz, Bowen Baker, Maciek Chociej, Rafal Jozefowicz, Bob McGrew, Jakub Pachocki, Arthur Petron, Matthias Plappert, Glenn Powell, Alex Ray, Jonas Schneider, Szymon Sidor, Josh Tobin, Peter Welinder, Lilian Weng, Wojciech Zaremba (2018)</li>
+                            <li><a href="https://arxiv.org/abs/2211.11744">Visual Dexterity: In-hand Dexterous Manipulation from Depth</a>. Tao Chen, Megha Tippur, Siyang Wu, Vikash Kumar, Edward Adelson, Pulkit Agrawal (2022)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2210.13702">DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality</a>. Ankur Handa, Arthur Allshire, Viktor Makoviychuk, Aleksei Petrenko, Ritvik Singh, Jingzhou Liu, Denys Makoviichuk, Karl Van Wyk, Alexander Zhurkevich, Balakumar Sundaralingam, Yashraj Narang, Jean-Francois Lafleche, Dieter Fox, Gavriel State (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2111.03043">A System for General In-Hand Object Re-Orientation</a>. Tao Chen, Jie Xu, Pulkit Agrawal (2021)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          <!-- Zifan<br>Steven -->
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 10</strong><br>Fri, Oct 27</td>
                         <td class="topic-cell"><p>Language in Robotics</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/2302.07241">ConceptFusion: Open-set Multimodal 3D Mapping</a>. Krishna Murthy Jatavallabhula, Alihusein Kuwajerwala, Qiao Gu, Mohd Omama, Tao Chen, Shuang Li, Ganesh Iyer, Soroush Saryazdi, Nikhil Keetha, Ayush Tewari, Joshua B. Tenenbaum, Celso Miguel de Melo, Madhava Krishna, Liam Paull, Florian Shkurti, Antonio Torralba (2023)</li>
-                            <!-- <li><a href="https://robotics-transformer2.github.io/assets/rt2.pdf">RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</a>. Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi Chen, Krzysztof Choromanski,
+                            <li><a href="https://robotics-transformer2.github.io/assets/rt2.pdf">RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</a>. Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi Chen, Krzysztof Choromanski,
                               Tianli Ding, Danny Driess, Avinava Dubey, Chelsea Finn, Pete Florence, Chuyuan Fu,
                               Montse Gonzalez Arenas, Keerthana Gopalakrishnan, Kehang Han, Karol Hausman, Alexander Herzog,
                               Jasmine Hsu, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, Dmitry Kalashnikov, Yuheng Kuang,
@@ -518,8 +563,7 @@
                               Karl Pertsch, Kanishka Rao, Krista Reymann, Michael Ryoo, Grecia Salazar, Pannag Sanketi,
                               Pierre Sermanet, Jaspiar Singh, Anikait Singh, Radu Soricut, Huong Tran, Vincent Vanhoucke, Quan Vuong,
                               Ayzaan Wahid, Stefan Welker, Paul Wohlhart, Jialin Wu, Fei Xia, Ted Xiao, Peng Xu, Sichun Xu, Tianhe Yu,
-                              and Brianna Zitkovich (2023)</li> -->
-                            <li><a href="https://arxiv.org/abs/2307.05973">VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models</a>. Wenlong Huang, Chen Wang, Ruohan Zhang, Yunzhu Li, Jiajun Wu, Li Fei-Fei (2023)</li>
+                              and Brianna Zitkovich (2023)</li>
                           </ul>
                           <ul class=optional-reading>
                             <li><a href="https://www.roboticsproceedings.org/rss16/p082.pdf">Concept2Robot: Learning Manipulation Concepts from Instructions and Human Demonstrations</a>. Lin Shao, Toki Migimatsu, Qiang Zhang, Karen Yang, and Jeannette Bohg (2020)</li>
@@ -535,7 +579,7 @@
                       </tr>
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 11</strong><br>Fri, Nov 3</td>
+                        <td class="date-cell"><strong>Week 11</strong><br>Wed, Nov 1</td>
                         <td class="topic-cell"><p>Sim-to-Real Gap</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/1804.09364">Driving Policy Transfer via Modularity and Abstraction</a>. Matthias Müller, Alexey Dosovitskiy, Bernard Ghanem, Vladlen Koltun (2018)</li>
@@ -555,13 +599,14 @@
                       </tr>
 
                       <tr class="schedule-row">
-                        <td class="date-cell"><strong>Week 12</strong><br>Wed, Nov 8</td>
+                        <td class="date-cell"><strong>Week 11</strong><br>Fri, Nov 3</td>
                         <td class="topic-cell"><p>Program Synthesis for Embodied Agents</p>
                           <ul>
                             <li><a href="https://arxiv.org/abs/2209.07753">Code as Policies: Language Model Programs for Embodied Control</a>. Jacky Liang, Wenlong Huang, Fei Xia, Peng Xu, Karol Hausman, Brian Ichter, Pete Florence, Andy Zeng (2022)</li>
-                            <li><a href="https://arxiv.org/abs/2305.16291">Voyager: An Open-Ended Embodied Agent with Large Language Models</a>. Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2307.05973">VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models</a>. Wenlong Huang, Chen Wang, Ruohan Zhang, Yunzhu Li, Jiajun Wu, Li Fei-Fei (2023)</li>
                           </ul>
                           <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2305.16291">Voyager: An Open-Ended Embodied Agent with Large Language Models</a>. Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar (2023)</li>
                             <li><a href="https://arxiv.org/abs/2209.11302">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a>. Ishika Singh, Valts Blukis, Arsalan Mousavian, Ankit Goyal, Danfei Xu, Jonathan Tremblay, Dieter Fox, Jesse Thomason, Animesh Garg (2022)</li>
                             <li><a href="https://arxiv.org/abs/2006.08381">DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning</a>. Kevin Ellis, Catherine Wong, Maxwell Nye, Mathias Sable-Meyer, Luc Cary, Lucas Morales, Luke Hewitt, Armando Solar-Lezama, Joshua B. Tenenbaum (2020)</li>
                           </ul>
@@ -572,6 +617,15 @@
                         <td class="notes-cell">
                           <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
                         </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 12</strong><br>Wed, Nov 8</td>
+                        <td class="topic-cell"><p>No Class - Attending Conference</p>
+                          <ul></ul>
+                        </td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell"></td>
                       </tr>
 
                       <tr class="schedule-row">

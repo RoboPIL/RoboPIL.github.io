@@ -28,23 +28,26 @@
     </head>
     <body>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-            <a class="navbar-brand" href="index.html">CS598YL - Fall 2023</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="logistics.html">Logistics</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="syllabus.html">Syllabus</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="project.html">Course Project</a>
-                    </li>
-                </ul>
-            </div>
+            <div class="container">
+          <a class="navbar-brand" href="index.html">CS598YL - Fall 2023</a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+    
+          <div class="collapse navbar-collapse" id="navbarToggle">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="logistics.html">Logistics</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="syllabus.html">Syllabus</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="project.html">Course Project</a>
+                </li>
+              </ul>
+          </div>
+          </div>
         </nav>
         <div class="content">
             <div class="bg-no-highlight">
@@ -57,7 +60,7 @@
                     <div class="section">
                         <div class="row">
                             <div class="col-md-12">
-                                <p>TBD</p>
+                                <p>The primary objective of the course project is to give you hands-on experiences in robot learning. For the project, you are expected to have a robot, at least in the simulator. If you can access to a real robot, using a real robot is encouraged. You may work individually or pair up with one teammate on the project, and grades will be calibrated by team size.</p>
                             </div>
                         </div>
                     </div>
@@ -69,8 +72,32 @@
                     <div class="section">
                         <div class="row">
                             <div class="col-md-12">
-                                <h4>Default Project</h4>
-                                <p>TBD</p>
+                                <h4>Suggested Topics</h4>
+                                <p>Here is a list of suggested project topics. You are welcome to discuss with instructor and TA if you have other interesting topics you want to work on.</p>
+                                <ul>
+                                    <li>Perception</li>
+                                    <ul>
+                                        <li>Representation learning for planning and control; 3D/2D;</li>
+                                        <li>Incorporating large foundation model (e.g. <a href="https://github.com/facebookresearch/dinov2">DINO</a>, <a href="https://github.com/facebookresearch/segment-anything">SAM</a>, VLM)</li>
+                                    </ul>
+                                    <li>Dynamics</li>
+                                    <ul>
+                                        <li>Model learning; Rigid / deformable / articulated / granular;</li>
+                                        <li>Comparison with physics-based simulators</li>
+                                    </ul>
+                                    <li>Planning & Control</li>
+                                    <ul>
+                                        <li>Model-free RL; Model-based RL;</li>
+                                        <li>Model-predictive control (MPC)</li>
+                                        <li>Task and motion planning (TAMP)</li>
+                                        <li>LLM-guided planning</li>
+                                    </ul>
+                                    <li>System Integration</li>
+                                    <ul>
+                                        <li>Mobile / table-top manipulation</li>
+                                        <li>Dexterous manipulation; Bi-manual manipulation</li>
+                                    </ul>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -83,12 +110,12 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <h4>Grading Policy</h4>
-                                The course project is worth TBD% of the total grade. The following shows the breakdown:
+                                The course project is worth 50% of the total grade. The following shows the breakdown:
                                 <ul>
-                                    <li>Project Proposal (TBD%). Due TBD.</li>
-                                    <li>Project Milestone (TBD%). Due TBD.</li>
-                                    <li>Final Report (TBD%). Due TBD.</li>
-                                    <li>Spotlight Talk (TBD%). TBD.</li>
+                                    <li>Project Proposal (10%). Due Thu Sept 14 11:59 PM.</li>
+                                    <li>Milestone (10%). Due Thu Oct 19 11:59 PM.</li>
+                                    <li>Project Report (15%). Due Fri Dec 8 11:59 PM.</li>
+                                    <li>Project Presentation (15%). Week 15.</li>
                                 </ul>
                             </div>
                         </div>
@@ -101,17 +128,35 @@
                     <div class="section">
                         <div class="row">
                             <div class="col-md-12">
-                                <h4>Project Proposal</h4>
-                                <p>The project proposal should be one paragraph (300-400 words). Your project proposal should describe:</p>
+                                <h4>Project Proposal (10%)</h4>
+                                <p>
+                                    Your project proposal report should be max 2 pages using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
+                                    in LaTeX. The following is a suggested structure for your report:
                                 <ul>
-                                    <li>(20%) What is the problem that you will be investigating? Why is it interesting?</li>
-                                    <li>(20%) What reading will you examine to provide context and background?</li>
-                                    <li>(20%) What data will you use? If you are collecting new data, how will you do it?</li>
-                                    <li>(20%) What method or algorithm are you proposing? If there are existing implementations, will you use them and how? How do you plan to improve or modify such implementations? You don't have to have an exact answer at this point, but you should have a general sense of how you will approach the problem you are working on.</li>
-                                    <li>(20%) How will you evaluate your results? Qualitatively, what kind of results do you expect (e.g., plots or figures)? Quantitatively, what kind of analysis will you use to evaluate and/or compare your results (e.g., what performance metrics or statistical tests)?</li>
+                                    <li>Title, Author(s)</li>
+                                    <li>
+                                        <strong>Problem Overview (2%):</strong>
+                                        What is the problem that you will be investigating? Why is it interesting?
+                                    </li>
+                                    <li>
+                                        <strong>Literature Review (2%):</strong>
+                                        What reading will you examine to provide context and background?
+                                    </li>
+                                    <li>
+                                        <strong>Proposed Method and Experiments (2%):</strong>
+                                        What method or algorithm are you proposing? You don't have to have an exact answer at this point, but you should have a general sense of how you will approach the problem you are working on. How will you evaluate your results, both quantitatively and qualitatively?
+                                    </li>
+                                    <li>
+                                        <strong>Milestone and Timeline (2%):</strong>
+                                        What are intermediate milestones you plan to accomplish? What is the final goal you plan to reach? What is the timeline for the project?
+                                    </li>
+                                    <li>
+                                        <strong>Team Background (2%):</strong>
+                                        What is your team's background? How is it related to your project?
+                                    </li>
                                 </ul>
                                 <p>
-                                    <strong>Submission:</strong> TBD
+                                    <strong>Submission:</strong> <a href="https://www.gradescope.com/">Gradescope</a>
                                 </p>
                             </div>
                         </div>
@@ -124,9 +169,9 @@
                     <div class="section">
                         <div class="row">
                             <div class="col-md-12">
-                                <h4>Project Milestone</h4>
+                                <h4>Milestone (10%)</h4>
                                 <p>
-                                    Your project milestone report should be between 2-3 pages using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
+                                    Your project milestone report should be max 3 pages using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
                                     in LaTeX. The following is a suggested structure for your report:
                                 </p>
                                 <ul>
@@ -134,30 +179,28 @@
                                         <strong>Title, Author(s)</strong>
                                     </li>
                                     <li>
-                                        <strong>Introduction:</strong>
+                                        <strong>Introduction (2%):</strong>
                                         Introduce your problem and the overall plan for approaching your problem
                                     </li>
                                     <li>
-                                        <strong>Problem Statement:</strong>
+                                        <strong>Problem Statement (2%):</strong>
                                         Describe your problem precisely specifying the dataset to be used, expected results and evaluation
                                     </li>
                                     <li>
-                                        <strong>Literature Review:</strong>
+                                        <strong>Literature Review (2%):</strong>
                                         Describe important related work and their relevance to your project
                                     </li>
                                     <li>
-                                        <strong>Technical Approach:</strong>
+                                        <strong>Technical Approach (2%):</strong>
                                         Describe the methods you intend to apply to solve the given problem
                                     </li>
                                     <li>
-                                        <strong>Intermediate/Preliminary Results:</strong>
+                                        <strong>Intermediate/Preliminary Results (2%):</strong>
                                         State and evaluate your results up to the milestone
                                     </li>
                                 </ul>
                                 <p>
-                                    <strong>Submission:</strong>
-                                    Please submit your milestone as a PDF on <a href="https://canvas.utexas.edu/">Canvas</a>
-                                    . <strong>Only one person on your team should submit.</strong>
+                                    <strong>Submission:</strong> <a href="https://www.gradescope.com/">Gradescope</a>
                                 <p>
                             </div>
                         </div>
@@ -170,46 +213,40 @@
         <div class="section">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Final Report</h4>
+                    <h4>Project Report (15%)</h4>
                     <p>
-                        Your final write-up is required to be between 6-8 pages (8 pages max) using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
-                        , structured like a paper from a robotics conference. Please use this template so we can fairly judge all student projects without worrying about altered font sizes, margins, etc. After the class, we will post all the final reports online so that you can read about each others' work. If you do not want your writeup to be <strong>posted online</strong>
-                        , please let us know when submitting. The following is a suggested structure for your report, as well as the rubric that we will follow when evaluating reports. You don't necessarily have to organize your report using these sections in this order, but that would likely be a good starting point for most projects.
+                        Your final write-up is required to be between 6-8 pages (8 pages max) using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a> in LaTeX. The following is a suggested structure for your report:
                     </p>
                     <ul>
                         <li>
                             <strong>Title, Author(s)</strong>
                         </li>
                         <li>
-                            <strong>Abstract:</strong>
+                            <strong>Abstract (1.5%):</strong>
                             Briefly describe your problem, approach, and key results. Should be no more than 300 words.
                         </li>
                         <li>
-                            <strong>Introduction (10%):</strong>
+                            <strong>Introduction (1.5%):</strong>
                             Describe the problem you are working on, why it's important, and an overview of your results
                         </li>
                         <li>
-                            <strong>Related Work (10%):</strong>
+                            <strong>Related Work (1.5%):</strong>
                             Discuss published work that relates to your project. How is your approach similar or different from others?
                         </li>
                         <li>
-                            <strong>Data (10%):</strong>
-                            Describe the data or simulation environment you are working with for your project. What type is it? Where did it come from? How much data are you working with? How many simulation runs did you work with? Did you have to do any preprocessing, filtering, or other special treatment to use this data in your project?
-                        </li>
-                        <li>
-                            <strong>Methods (30%):</strong>
+                            <strong>Methods (4.5%):</strong>
                             Discuss your approach for solving the problems that you set up in the introduction. Why is your approach the right thing to do? Did you consider alternative approaches? You should demonstrate that you have applied ideas and skills built up during the quarter to tackling your problem of choice. It may be helpful to include figures, diagrams, or tables to describe your method or compare it with other methods.
                         </li>
                         <li>
-                            <strong>Experiments (30%):</strong>
+                            <strong>Experiments (4.5%):</strong>
                             Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
                         </li>
                         <li>
-                            <strong>Conclusion (5%):</strong>
+                            <strong>Conclusion (0.75%):</strong>
                             Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
                         </li>
                         <li>
-                            <strong>Writing / Formatting (5%):</strong>
+                            <strong>Writing / Formatting (0.75%):</strong>
                             Is your paper clearly written and nicely formatted?
                         </li>
                         <li>
@@ -231,57 +268,42 @@
                         </li>
                     </ul>
                     <p>
-                        <strong>Submission:</strong>
-                        You will submit your final report as a PDF and your supplementary material as a separate PDF or ZIP file. We will provide detailed submission instructions as the deadline nears.
-                    </p>
+                        <strong>Submission:</strong> <a href="https://www.gradescope.com/">Gradescope</a>
                     <p>
-                        <strong>Additional Submission Requirements:</strong>
-                        We will also ask you do do the following when you submit your project report:
-                    </p>
-                    <ul>
-                        <li>
-                            <strong>
-                                Your report PDF should list <em>all</em>
-                                authors who have contributed to your work; enough to warrant a co-authorship position.
-                            </strong>
-                            This includes people not enrolled in CS391R such as faculty/advisors if they sponsored your work with funding or data, significant mentors (e.g., PhD students or postdocs who coded with you, collected data with you, or helped draft your model on a whiteboard). All authors should be listed directly underneath the title on your PDF. Include a footnote on the first page indicating which authors are not enrolled in CS391R. All co-authors should have their institutional/organizational affiliation specified below the title.
-</p>If you have non-CS391R contributors, you will be asked to describe the following:
-    
-<ul>
-    <li>
-        <strong>Specify the involvement of non-CS391R contributors</strong>
-        (discussion, writing code, writing paper, etc). For an example, please see the author contributions for <a href="https://www.nature.com/nature/journal/v529/n7587/full/nature16961.html#author-information">AlphaGo (Nature 2016)</a>
-        .
-    </li>
-    <li>
-        <strong>Specify whether the project has been submitted to a peer-reviewed conference or journal.</strong>
-        Include the full name and acronym of the conference (if applicable). For example: Neural Information Processing Systems (NIPS). This only applies if you have already submitted your paper/manuscript and it is under review as of the report deadline.
-    </li>
-</ul>
-</li>
-<li>
-    <strong>Any code that was used as a base for projects must be referenced and cited in the body of the paper.</strong>
-    This includes assignment code, finetuning example code, open-source, or Github implementations. You can use a footnote or full reference/bibliography entry.
-</li>
-<li>
-    <strong>If you are using this project for multiple classes, submit the other class PDF as well.</strong>
-    Remember, it is not allowed to use the same final report PDF for multiple classes.
-</li>
-</ul><p>In summary, include all contributing authors in your PDF; include detailed non-CS391R co-author information; tell us if you submitted to a conference, cite any code you used, and submit your dual-project report.</p>
-</div></div></div></div></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="bg-no-highlight">
     <div class="container">
         <div class="section"></div>
         <div class="section">
             <div class="row">
                 <div class="col-md-12">
-                    <h4>Spotlight Talk</h4>
+                    <h4>Project Presentation (15%)</h4>
                     <p>
-                        You will have an opportunity to present your awesome work to the instructor and other students in the last week of class. This resembles the spotlight talks in large AI conferences, such as CVPR, NeurIPS, RSS, and CoRL. See an example spotlight video in <a href="https://www.youtube.com/watch?v=y77FKikIIyE">RSS 2018</a>
-                        . Each team is required to submit an MP4 video of the slides with a resolution of 1280x720 preferred. This will enable us to load all talks onto the same laptop without any configuration or format issues while allowing presenters to use whatever graphics or video tools they choose to generate the presentation. Presentations should be limited to <strong>4 minutes and 55 seconds</strong>
-                        with the next speaker's video starting automatically at the 5-minute mark. If your video is longer than 4:55 it will be truncated. Please see the <a href="http://cvpr2018.thecvf.com/submission/presenter_instructions#spotloght_sessions">CVPR Presenter Instructions</a>
-                        page for more details about converting presentation slides to videos. We will send out information about uploading the presentation slides and videos as the deadline nears. For each project team, the spotlight talk can be presented by one member or multiple. The spotlight is worth <strong>5%</strong>
-                        of the total grade, and will be graded with the same criteria as the in-class paper presentations.
+                        You will have an opportunity to present your awesome work to the instructor and other students in the last three classes. Here are information about project presentation.
+                        <ul>
+                            <li>
+                                <strong>Time:</strong>
+                                10 minutes for presentation and 2 minutes for Q&A.
+                            </li>
+                            <li>
+                                <strong>Contents:</strong> similar to project report.
+                            </li>
+                            <li>
+                                <strong>Grading scheme:</strong>
+                                <ul>
+                                    <li>Review prior works and describe why the problem is interesting (3%)</li>
+                                    <li>Describe methods correctly and clearly (3%)</li>
+                                    <li>Present experimental results and analyze results (3%)</li>
+                                    <li>Discuss future research directions (3%)</li>
+                                    <li>Respond to questions and engage in open-ended discussion (3%)</li>
+                            </li>
+                        </ul>
                     </p>
                 </div>
             </div>
