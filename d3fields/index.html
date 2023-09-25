@@ -1,1 +1,516 @@
-hello world!
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="D3Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Robotic Manipulation">
+  <meta name="keywords" content="Robotic Manipulation, Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VoxPoser</title>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FV4ZJ9PVSV');
+  </script>
+
+  <script>
+
+    function updateInteractive() {
+      var task = document.getElementById("interative-menu").value;
+
+      console.log("interactive", task)
+
+      // if task does not contain the string "towel"
+      if (task.indexOf("towel") == -1) {
+        var video = document.getElementById("interactive-video");
+        video.src = "media/videos/" + 
+                    task + 
+                    ".mp4"
+        video.play();
+
+        var html = document.getElementById("interactive-html-1");
+        html.src = "media/interactive/" + 
+                    task + 
+                    ".html"
+
+        // hide the second iframe container
+        var iframeContainer2 = document.getElementById("second-iframe-container");
+        iframeContainer2.style.display = "none";
+      } else {
+        var video = document.getElementById("interactive-video");
+        video.src = "media/videos/hang-towel.mp4"
+        video.play();
+
+        var html1 = document.getElementById("interactive-html-1");
+        html1.src = "media/interactive/hang-towel-1.html"
+
+        // show and set the source for the second iframe
+        var html2 = document.getElementById("interactive-html-2");
+        html2.src = "media/interactive/hang-towel-2.html"
+
+        // show the second iframe container
+        var iframeContainer2 = document.getElementById("second-iframe-container");
+        iframeContainer2.style.display = "block";
+      }
+    }
+
+
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body onload="updateInteractive();">
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">D3Fields: Dynamic 3D Descriptor Fields<br>for Zero-Shot Generalizable Robotic Manipulation</h1>
+          <!-- <h3 class="title is-4 conference-authors"><a target="_blank" href="https://www.corl2023.org/">CoRL 2023 (Oral)</a></h3> -->
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://huangwl18.github.io/">Yixuan Wang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://robopil.github.io/d3fields/">Zhuoran Li</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://robopil.github.io/d3fields/">Mingtong Zhang</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://ece.illinois.edu/about/directory/faculty/krdc">Katherine Driggs-Campbell</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://jiajunwu.com/">Jiajun Wu</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>1</sup>
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>1, 2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign,</span>
+            <span class="author-block"><sup>2</sup>Stanford University,</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="voxposer.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://arxiv.org/abs/2307.05973"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://youtu.be/Yvn4eR05A3M"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://voxposer.github.io"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code (Coming Soon)</span>
+                </a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-fullhd">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <video id="teaser" autoplay muted loop height="60%" width="60%">
+            <source src="media/videos/teaser.mp4"
+                    type="video/mp4">
+          </video>
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <span class="dperact">VoxPoser</span> extracts <b>affordances</b> and <b>constraints</b> from large language models and vision-language models<br>to compose 3D value maps, which are used by motion planners to <b>zero-shot synthesize</b> trajectories for everyday manipulation tasks.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/take-out-the-toaster-and-put-it-on-the-wooden-plate.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/close-top-drawer-dist.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/sort-trash-to-tray-dist.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+           <video poster="" autoplay muted loop height="100%">
+             <source src="media/videos/open-bottle.mp4"
+                     type="video/mp4">
+           </video>
+         </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/turn-on-the-lamp.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/sweep-the-trash-into-the-dustpan.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/set-up-the-utensils-for-my-pasta.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/unplug-charger.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/get-napkin.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/hang-towel.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+       <div class="item">
+          <video poster="" autoplay muted loop height="100%">
+            <source src="media/videos/measure-apple.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<h2 class="subtitle has-text-centered">
+</br>
+  VoxPoser can <b>zero-shot synthesize</b> trajectories for real-world manipulation tasks with an <b>open-set</b> of free-form language instructions and an <b>open-set</b> of objects.
+</h2> -->
+
+
+<section class="section">
+  <!-- Abstract. -->
+  <!-- <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large language models (LLMs) are shown to possess a wealth of actionable knowledge that can be extracted for robot manipulation in the form of reasoning and planning.
+            Despite the progress, most still rely on pre-defined motion primitives to carry out the physical interactions with the environment, which remains a major bottleneck.
+            In this work, we aim to synthesize robot trajectories, i.e., a dense sequence of 6-DoF end-effector waypoints,
+            for a large variety of manipulation tasks given an <i>open-set</i> of instructions and an <i>open-set</i> of objects.
+            We achieve this by first observing that LLMs excel at inferring affordances and constraints given a free-form language instruction
+            More importantly, by leveraging their code-writing capabilities, they can interact with a visual-language model (VLM) to compose 3D value maps to ground the knowledge into the observation space of the agent.
+            The composed value maps are then used in a model-based planning framework to <i>zero-shot</i> synthesize closed-loop robot trajectories with robustness to dynamic perturbations.
+            We further demonstrate how the proposed framework can benefit from online experiences by efficiently learning a dynamics model for scenes that involve contact-rich interactions.
+            We present a large-scale study of the proposed method in both simulated and real-robot environments, showcasing the ability to perform a large variety of everyday manipulation tasks specified in free-form natural language.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Paper video. -->
+  <br>
+  <br>
+
+  <!-- <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Video</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/Yvn4eR05A3M"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div> -->
+
+</section>
+
+<!-- <section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+
+
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+        <h2 class="title is-3"><span class="dperact">VoxPoser</span></h2>
+
+        <div class="content has-text-justified">
+        </div>
+        <img src="media/figures/method.jpg" class="interpolation-image" />
+        </br>
+        </br>
+          <p class="content has-text-justified">
+            Given the RGB-D observation of the environment and a language instruction, LLMs generate code, which interacts with VLMs, to produce a sequence of 3D affordance maps and constraint maps (collectively referred to as value maps) grounded in the observation space of the robot <strong>(a)</strong>. The composed value maps then serve as objective functions for motion planners to synthesize trajectories for robot manipulation <strong>(b)</strong>. The entire process does not involve any additional training.
+          </p>
+          
+        </br>
+        </br>
+
+        <h2 class="title is-3">Interactive Visualization</h2>
+
+
+
+        <div class="columns">
+          <div class="column has-text-centered">
+
+            Visualize value maps for   
+            <div class="select is-small is-rounded">     
+              <select id="interative-menu" onchange="updateInteractive()">
+              <option value="hang-towel-1" selected="selected">"Hang towel on rack"</option>
+              <option value="close-drawer">"Close the top drawer."</option>
+              <option value="get-napkin">"Take out a napkin."</option>
+              <option value="open-bottle">"Turn open vitamin bottle."</option>
+              </select>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="columns">
+          <div class="column is-half has-text-centered">
+            <p style="text-align:center;">
+              <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
+                <source src="media/videos/close-drawer.mp4" type="video/mp4">
+              </video>
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <iframe id="interactive-html-1" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <p style="text-align:center;">
+              Interactive Value Map 1
+            </p>
+          </div>
+          <div class="column has-text-centered" id="second-iframe-container">
+            <iframe id="interactive-html-2" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <p style="text-align:center;">
+              Interactive Value Map 2
+            </p>
+          </div>
+        </div>
+        
+        
+        
+    </div>
+  </div>
+</section> -->
+
+
+<!-- <section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Execution under Disturbances</h2>
+      
+      <p class="content has-text-justified">
+        Because the language model output stays the same throughout the task, we can cache its output and re-evaluate the generated code using closed-loop visual feedback, which enables fast replanning using MPC. This enables VoxPoser to be robust to online disturbances.
+      </p>
+      
+      <div class="columns">
+        <div class="column has-text-centered">
+          <video id="dist1"
+            controls
+            muted
+            autoplay
+            loop
+            width="99%">
+            <source src="media/videos/sort-trash-to-tray-dist.mp4" 
+            type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Sort the paper trash into the blue tray."
+          </p>
+        </div>
+    
+        <div class="column has-text-centered">
+          <video id="dist2"
+            controls
+            muted
+            autoplay
+            loop
+            width="99%">
+            <source src="media/videos/close-top-drawer-dist.mp4" 
+            type="video/mp4">
+          </video>
+          <p style="text-align:center">
+            "Close the top drawer."
+          </p>
+        </div>
+  </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
+      <h2 class="title is-3">Emergent Behavioral Capabilities</h2>
+      
+      <p class="content has-text-justified">
+        <li><strong>Estimating Physical Properties</strong>: given two blocks of unknown mass, the robot is tasked to conduct physics experiments using the available tools to determine which block is heavier.</li>
+        <li><strong>Behavioral Commonsense Reasoning</strong>: during a task where robot is setting the table, the user can specify behavioral preferences such as "I am left-handed", which requires the robot to comprehend its meaning in the context of the task.</li>
+        <li><strong>Fine-grained Language Correction</strong>: for tasks that require high precision such as "covering the teapot with the lid", user can give precise instructions to the robot such as "you're off by 1cm".</li>
+        <li><strong>Multi-step Visual Program</strong>: given a task "open the drawer precisely by half" where there is insufficient information because object models are not available, the robot can come up with multi-step manipulation strategies based on visual feedback that first opens the drawer fully while recording handle displacement, then close it back to the mid-point to satisfy the requirement.</li>
+      </p>
+      <br>
+      <div style="text-align: center;">
+        <img src="media/figures/emergent.png" class="interpolation-image" style="width: 70%; height: auto;"/>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+  <div class="container is-max-widescreen">
+  <div class="row">
+    <h2 class="title is-3">
+      Prompts
+    </h2>
+    <p class="content has-text-justified">
+        Prompts in Real-World Environments:
+        <br>
+        <a href="prompts/real_planner_prompt.txt">Planner</a> |
+        <a href="prompts/real_composer_prompt.txt">Composer</a> |
+        <a href="prompts/real_parse_query_obj_prompt.txt">Parse Query Object</a> |
+        <a href="prompts/real_get_affordance_map_prompt.txt">Get Affordance Maps</a> |
+        <a href="prompts/real_get_avoidance_map_prompt.txt">Get Avoidance Maps</a> |
+        <a href="prompts/real_get_rotation_map_prompt.txt">Get Rotation Maps</a> |
+        <a href="prompts/real_get_velocity_map_prompt.txt">Get Velocity Maps</a> |
+        <a href="prompts/real_get_gripper_map_prompt.txt">Get Gripper Maps</a>
+    </p>
+    <p class="content has-text-justified">
+        Prompts in Simulation Environments (planners are not used in simulation):
+        <br>
+        <a href="prompts/sim_composer_prompt.txt">Composer</a> |
+        <a href="prompts/sim_parse_query_obj_prompt.txt">Parse Query Object</a> |
+        <a href="prompts/sim_get_affordance_map_prompt.txt">Get Affordance Maps</a> |
+        <a href="prompts/sim_get_avoidance_map_prompt.txt">Get Avoidance Maps</a> |
+        <a href="prompts/sim_get_rotation_map_prompt.txt">Get Rotation Maps</a> |
+        <a href="prompts/sim_get_velocity_map_prompt.txt">Get Velocity Maps</a> |
+        <a href="prompts/sim_get_gripper_map_prompt.txt">Get Gripper Maps</a>
+    </p>
+  </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{huang2023voxposer,
+      title={VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models},
+      author={Huang, Wenlong and Wang, Chen and Zhang, Ruohan and Li, Yunzhu and Wu, Jiajun and Fei-Fei, Li},
+      journal={arXiv preprint arXiv:2307.05973},
+      year={2023}
+    }</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content has-text-centered">
+          <p>
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://peract.github.io/">PerAct</a>. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer> -->
+
+
+</body>
+</html>
