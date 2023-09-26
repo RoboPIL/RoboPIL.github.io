@@ -254,26 +254,21 @@
 
 <section class="section">
   <!-- Abstract. -->
-  <!-- <div class="container is-max-desktop">
+  <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large language models (LLMs) are shown to possess a wealth of actionable knowledge that can be extracted for robot manipulation in the form of reasoning and planning.
-            Despite the progress, most still rely on pre-defined motion primitives to carry out the physical interactions with the environment, which remains a major bottleneck.
-            In this work, we aim to synthesize robot trajectories, i.e., a dense sequence of 6-DoF end-effector waypoints,
-            for a large variety of manipulation tasks given an <i>open-set</i> of instructions and an <i>open-set</i> of objects.
-            We achieve this by first observing that LLMs excel at inferring affordances and constraints given a free-form language instruction
-            More importantly, by leveraging their code-writing capabilities, they can interact with a visual-language model (VLM) to compose 3D value maps to ground the knowledge into the observation space of the agent.
-            The composed value maps are then used in a model-based planning framework to <i>zero-shot</i> synthesize closed-loop robot trajectories with robustness to dynamic perturbations.
-            We further demonstrate how the proposed framework can benefit from online experiences by efficiently learning a dynamics model for scenes that involve contact-rich interactions.
-            We present a large-scale study of the proposed method in both simulated and real-robot environments, showcasing the ability to perform a large variety of everyday manipulation tasks specified in free-form natural language.
+            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce D<sup>3</sup>Fields — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
+            Specifically, we project arbitrary 3D points in the workspace onto multi-view 2D visual observations and interpolate features derived from foundational models. The resulting fused descriptor fields allow for flexible goal specifications using 2D images with varied contexts, styles, and instances.
+            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that D<sup>3</sup>Fields are both generalizable and effective for zero-shot robotic manipulation tasks.
+            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, D<sup>3</sup>Fields exhibit significantly better generalization abilities and manipulation accuracy.
           </p>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- Paper video. -->
   <br>
