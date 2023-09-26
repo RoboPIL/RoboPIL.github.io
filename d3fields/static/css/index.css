@@ -17,6 +17,9 @@ body {
   font-variant: small-caps;
 }
 
+.dperact {
+  font-variant: small-caps;
+}
 
 .teaser .hero-body {
   padding-top: 0;
@@ -27,6 +30,13 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.teaser video {
+  object-fit: fill;
+  
+}
+#glass{
+  margin-left: -10px;
+}
 
 .publication-title {
 }
@@ -71,7 +81,11 @@ body {
 }
 
 .publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
+   color: hsl(121, 100%, 36%) !important;
+}
+
+.conference-authors a {
+   color: hsl(0, 0%, 16%) !important;
 }
 
 .publication-authors a:hover {
@@ -134,7 +148,8 @@ body {
 }
 
 .interpolation-panel .interpolation-image {
-  width: 100%;
+  width: 100vh;
+  background-size: cover;
   border-radius: 5px;
 }
 
@@ -155,3 +170,21 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+#interpolation-image img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+ .dropdown-item{
+    white-space: pre-wrap;
+}  
+
+
+.justify {
+  text-align: justify;
+}
+

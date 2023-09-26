@@ -16,6 +16,8 @@
 
     gtag('config', 'G-FV4ZJ9PVSV');
   </script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
   <script>
 
@@ -248,7 +250,7 @@
 </section>
 <h2 class="subtitle has-text-centered">
 </br>
-  D<sup>3</sup>Fields supports goal specification using 2D images with varied styles, contexts, and instances<br>and <b>zero-shot</b> generalizable manipulation applicable to a broad spectrum of household tasks.
+  <span class="dperact">D<sup>3</sup>Fields</span> supports goal specification using 2D images with varied styles, contexts, and instances<br>and <b>zero-shot</b> generalizable manipulation applicable to a broad spectrum of household tasks.
 </h2>
 
 
@@ -260,10 +262,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce D<sup>3</sup>Fields — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
+            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce <span class="dperact">D<sup>3</sup>Fields</span> — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
             Specifically, we project arbitrary 3D points in the workspace onto multi-view 2D visual observations and interpolate features derived from foundational models. The resulting fused descriptor fields allow for flexible goal specifications using 2D images with varied contexts, styles, and instances.
-            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that D<sup>3</sup>Fields are both generalizable and effective for zero-shot robotic manipulation tasks.
-            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, D<sup>3</sup>Fields exhibit significantly better generalization abilities and manipulation accuracy.
+            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that <span class="dperact">D<sup>3</sup>Fields</span> are both generalizable and effective for zero-shot robotic manipulation tasks.
+            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, <span class="dperact">D<sup>3</sup>Fields</span> exhibit significantly better generalization abilities and manipulation accuracy.
           </p>
         </div>
       </div>
@@ -287,7 +289,7 @@
 
 </section>
 
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
@@ -295,7 +297,7 @@
 
     <div class="rows is-centered ">
       <div class="row is-full-width">
-        <h2 class="title is-3"><span class="dperact">VoxPoser</span></h2>
+        <h2 class="title is-3"><span class="dperact">D<sup>3</sup>Fields</span></h2>
 
         <div class="content has-text-justified">
         </div>
@@ -303,13 +305,19 @@
         </br>
         </br>
           <p class="content has-text-justified">
-            Given the RGB-D observation of the environment and a language instruction, LLMs generate code, which interacts with VLMs, to produce a sequence of 3D affordance maps and constraint maps (collectively referred to as value maps) grounded in the observation space of the robot <strong>(a)</strong>. The composed value maps then serve as objective functions for motion planners to synthesize trajectories for robot manipulation <strong>(b)</strong>. The entire process does not involve any additional training.
+            <b>Overview of the proposed framework.</b>
+            (a) The fusion process fuses RGBD observations from multiple views.
+            Each view is processed by foundation models to obtain the feature volume \(\mathcal{W}\).
+            Arbitrary 3D points are processed through projection and interpolation.
+            (b) After fusing information from multiple views, we obtain an implicit distance function to reconstruct the mesh form.
+            We also have instance masks and semantic features for evaluated 3D points, as shown by the mask field and descriptor field in the top right subfigure.
+            (c) Given a 2D goal image, we use foundation models to extract the descriptor map. Then we correspond 3D features to 2D features and define the planning cost based on the correspondence.
           </p>
           
         </br>
         </br>
 
-        <h2 class="title is-3">Interactive Visualization</h2>
+        <!-- <h2 class="title is-3">Interactive Visualization</h2>
 
 
 
@@ -349,13 +357,13 @@
               Interactive Value Map 2
             </p>
           </div>
-        </div>
+        </div> -->
         
         
         
     </div>
   </div>
-</section> -->
+</section>
 
 
 <!-- <section class="section">
