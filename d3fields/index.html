@@ -26,38 +26,20 @@
 
       console.log("interactive", task)
 
-      // if task does not contain the string "towel"
-      if (task.indexOf("towel") == -1) {
-        var video = document.getElementById("interactive-video");
-        video.src = "media/videos/" + 
-                    task + 
-                    ".mp4"
-        video.play();
+      var video = document.getElementById("interactive-video");
+      video.src = "media/videos/" + 
+                  task + 
+                  ".mp4"
+      video.play();
 
-        var html = document.getElementById("interactive-html-1");
-        html.src = "media/interactive/" + 
-                    task + 
-                    ".html"
+      var html = document.getElementById("interactive-html-1");
+      html.src = "media/interactive/" + 
+                  task + 
+                  ".html"
 
-        // hide the second iframe container
-        var iframeContainer2 = document.getElementById("second-iframe-container");
-        iframeContainer2.style.display = "none";
-      } else {
-        var video = document.getElementById("interactive-video");
-        video.src = "media/videos/hang-towel.mp4"
-        video.play();
-
-        var html1 = document.getElementById("interactive-html-1");
-        html1.src = "media/interactive/hang-towel-1.html"
-
-        // show and set the source for the second iframe
-        var html2 = document.getElementById("interactive-html-2");
-        html2.src = "media/interactive/hang-towel-2.html"
-
-        // show the second iframe container
-        var iframeContainer2 = document.getElementById("second-iframe-container");
-        iframeContainer2.style.display = "block";
-      }
+      // hide the second iframe container
+      var iframeContainer2 = document.getElementById("second-iframe-container");
+      iframeContainer2.style.display = "none";
     }
 
 
@@ -313,24 +295,32 @@
             We also have instance masks and semantic features for evaluated 3D points, as shown by the mask field and descriptor field in the top right subfigure.
             (c) Given a 2D goal image, we use foundation models to extract the descriptor map. Then we correspond 3D features to 2D features and define the planning cost based on the correspondence.
           </p>
-          
-        </br>
-        </br>
+        
+    </div>
+  </div>
+</section>
 
-        <!-- <h2 class="title is-3">Interactive Visualization</h2>
+
+<!-- <section class="section">
+  <div class="container is-max-widescreen">
+
+    <div class="rows">
 
 
+    <div class="rows is-centered ">
+      <div class="row is-full-width">
+
+        <h2 class="title is-3">Interactive Visualization</h2>
 
         <div class="columns">
           <div class="column has-text-centered">
 
-            Visualize value maps for   
+            Visualize <span class="dperact">D<sup>3</sup>Fields</span> for
             <div class="select is-small is-rounded">     
               <select id="interative-menu" onchange="updateInteractive()">
-              <option value="hang-towel-1" selected="selected">"Hang towel on rack"</option>
-              <option value="close-drawer">"Close the top drawer."</option>
-              <option value="get-napkin">"Take out a napkin."</option>
-              <option value="open-bottle">"Turn open vitamin bottle."</option>
+              <option value="hang-towel-1" selected="selected">shoes</option>
+              <option value="close-drawer">mugs</option>
+              <option value="get-napkin">forks</option>
               </select>
             </div>
           </div>
@@ -348,22 +338,21 @@
           <div class="column has-text-centered">
             <iframe id="interactive-html-1" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
             <p style="text-align:center;">
-              Interactive Value Map 1
+              Mask Field
             </p>
           </div>
           <div class="column has-text-centered" id="second-iframe-container">
             <iframe id="interactive-html-2" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
             <p style="text-align:center;">
-              Interactive Value Map 2
+              Descriptor Field
             </p>
           </div>
-        </div> -->
-        
+        </div>
         
         
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="section">
@@ -463,16 +452,16 @@
     </p>
   </div>
   </div>
-</section>
+</section>  -->
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{huang2023voxposer,
-      title={VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models},
-      author={Huang, Wenlong and Wang, Chen and Zhang, Ruohan and Li, Yunzhu and Wu, Jiajun and Fei-Fei, Li},
-      journal={arXiv preprint arXiv:2307.05973},
+      title={D$^3$Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Robotic Manipulation},
+      author={Wang, Yixuan and Li, Zhuoran and Zhang, Mingtong and Driggs-Campbell, Katherine and Wu, Jiajun and Fei-Fei, Li and Li, Yunzhu},
+      journal={arXiv preprint arXiv:},
       year={2023}
     }</code></pre>
   </div>
@@ -485,13 +474,13 @@
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and <a href="https://peract.github.io/">PerAct</a>. 
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>, <a href="https://peract.github.io/">PerAct</a>, and <a href="https://voxposer.github.io/">VoxPoser</a>. 
           </p>
         </div>
       </div>
     </div>
   </div>
-</footer> -->
+</footer>
 
 
 </body>
