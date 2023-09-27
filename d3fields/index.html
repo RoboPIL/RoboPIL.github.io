@@ -26,16 +26,20 @@
 
       console.log("interactive", task)
 
-      var video = document.getElementById("interactive-video");
-      video.src = "media/videos/" + 
+      var img = document.getElementById("interactive-img");
+      img.src = "media/interactive/" + 
                   task + 
-                  ".mp4"
-      video.play();
+                  ".png"
 
-      var html = document.getElementById("interactive-html-1");
-      html.src = "media/interactive/" + 
+      var html_1 = document.getElementById("interactive-html-1");
+      html_1.src = "media/interactive/" + 
                   task + 
-                  ".html"
+                  "_mask.html"
+
+      var html_2 = document.getElementById("interactive-html-2");
+      html_2.src = "media/interactive/" + 
+                  task + 
+                  "_feature.html"
 
       // hide the second iframe container
       var iframeContainer2 = document.getElementById("second-iframe-container");
@@ -89,10 +93,10 @@
               <a target="_blank" href="https://jiajunwu.com/">Jiajun Wu</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>1</sup>
+              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>1, 2</sup>,
+              <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>1, 2</sup>
             </span>
           </div>
 
@@ -301,7 +305,7 @@
 </section>
 
 
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
@@ -318,9 +322,9 @@
             Visualize <span class="dperact">D<sup>3</sup>Fields</span> for
             <div class="select is-small is-rounded">     
               <select id="interative-menu" onchange="updateInteractive()">
-              <option value="hang-towel-1" selected="selected">shoes</option>
-              <option value="close-drawer">mugs</option>
-              <option value="get-napkin">forks</option>
+              <option value="shoe" selected="selected">shoes</option>
+              <option value="mug">mugs</option>
+              <option value="fork">forks</option>
               </select>
             </div>
           </div>
@@ -330,19 +334,17 @@
         <div class="columns">
           <div class="column is-half has-text-centered">
             <p style="text-align:center;">
-              <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
-                <source src="media/videos/close-drawer.mp4" type="video/mp4">
-              </video>
+              <img id="interactive-img", src="media/interactive/shoe.png" class="interpolation-image" />
             </p>
           </div>
           <div class="column has-text-centered">
-            <iframe id="interactive-html-1" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <iframe id="interactive-html-1" src="media/interactive/shoe_mask.html" width="100%" height="300" frameborder="0"></iframe>
             <p style="text-align:center;">
               Mask Field
             </p>
           </div>
           <div class="column has-text-centered" id="second-iframe-container">
-            <iframe id="interactive-html-2" src="media/interactive/close-drawer.html" width="100%" height="300" frameborder="0"></iframe>
+            <iframe id="interactive-html-2" src="media/interactive/shoe_feature.html" width="100%" height="300" frameborder="0"></iframe>
             <p style="text-align:center;">
               Descriptor Field
             </p>
@@ -352,7 +354,7 @@
         
     </div>
   </div>
-</section> -->
+</section>
 
 
 <!-- <section class="section">
