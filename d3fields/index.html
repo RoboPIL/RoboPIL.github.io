@@ -296,12 +296,51 @@
             (c) Given a 2D goal image, we use foundation models to extract the descriptor map. Then we correspond 3D features to 2D features and define the planning cost based on the correspondence.
           </p>
         
+      <br>
+      <br>
+
+      <h2 class="title is-3">Interactive Visualization</h2>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+
+          Visualize D<sup>3</sup>Fields for
+          <div class="select is-small is-rounded">     
+            <select id="interative-menu" onchange="updateInteractive()">
+            <option value="shoe" selected="selected">shoes</option>
+            <option value="mug">mugs</option>
+            <option value="fork">forks</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns">
+        <div class="column is-half has-text-centered">
+          <p style="text-align:center;">
+            <img id="interactive-img", src="media/interactive/shoe.png" class="interpolation-image" />
+          </p>
+        </div>
+        <div class="column has-text-centered">
+          <iframe id="interactive-html-1" src="media/interactive/shoe_mask.html" width="100%" height="300" frameborder="0"></iframe>
+          <p style="text-align:center;">
+            Mask Field
+          </p>
+        </div>
+        <div class="column has-text-centered" id="second-iframe-container">
+          <iframe id="interactive-html-2" src="media/interactive/shoe_feature.html" width="100%" height="300" frameborder="0"></iframe>
+          <p style="text-align:center;">
+            Descriptor Field
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
@@ -350,7 +389,7 @@
         
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="section">
