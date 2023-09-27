@@ -151,7 +151,7 @@
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-        <span class="dperact">D<sup>3</sup>Fields</span> is a <b>3D</b>, <b>dynamic</b>, and <b>semantic</b> scene representation using foundation models,<br>which supports <b>zero-shot</b> generalizable robotic manipulation.
+        D<sup>3</sup>Fields is a <b>3D</b>, <b>dynamic</b>, and <b>semantic</b> scene representation using foundation models,<br>which supports <b>zero-shot</b> generalizable robotic manipulation.
         </h2>
       </div>
     </div>
@@ -236,7 +236,7 @@
 </section>
 <h2 class="subtitle has-text-centered">
 </br>
-  <span class="dperact">D<sup>3</sup>Fields</span> supports goal specification using 2D images with varied styles, contexts, and instances<br>and <b>zero-shot</b> generalizable manipulation applicable to a broad spectrum of household tasks.
+  D<sup>3</sup>Fields supports goal specification using 2D images with varied styles, contexts, and instances<br>and <b>zero-shot</b> generalizable manipulation applicable to a broad spectrum of household tasks.
 </h2>
 
 
@@ -248,10 +248,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce <span class="dperact">D<sup>3</sup>Fields</span> — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
+            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce D<sup>3</sup>Fields — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
             Specifically, we project arbitrary 3D points in the workspace onto multi-view 2D visual observations and interpolate features derived from foundational models. The resulting fused descriptor fields allow for flexible goal specifications using 2D images with varied contexts, styles, and instances.
-            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that <span class="dperact">D<sup>3</sup>Fields</span> are both generalizable and effective for zero-shot robotic manipulation tasks.
-            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, <span class="dperact">D<sup>3</sup>Fields</span> exhibit significantly better generalization abilities and manipulation accuracy.
+            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that D<sup>3</sup>Fields are both generalizable and effective for zero-shot robotic manipulation tasks.
+            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, D<sup>3</sup>Fields exhibit significantly better generalization abilities and manipulation accuracy.
           </p>
         </div>
       </div>
@@ -283,7 +283,7 @@
 
     <div class="rows is-centered ">
       <div class="row is-full-width">
-        <h2 class="title is-3"><span class="dperact">D<sup>3</sup>Fields</span></h2>
+        <h2 class="title is-3">D<sup>3</sup>Fields</h2>
 
         <div class="content has-text-justified">
         </div>
@@ -319,7 +319,7 @@
         <div class="columns">
           <div class="column has-text-centered">
 
-            Visualize <span class="dperact">D<sup>3</sup>Fields</span> for
+            Visualize D<sup>3</sup>Fields for
             <div class="select is-small is-rounded">     
               <select id="interative-menu" onchange="updateInteractive()">
               <option value="shoe" selected="selected">shoes</option>
@@ -334,7 +334,10 @@
         <div class="columns">
           <div class="column is-half has-text-centered">
             <p style="text-align:center;">
-              <img id="interactive-img", src="media/interactive/shoe.png" class="interpolation-image" />
+              <video id="interactive-img" width="100%" height="100%" controls autoplay loop muted>
+                <source src="media/videos/shoe.mp4" type="video/mp4">
+              </video>
+              <!-- <img id="interactive-img", src="media/interactive/shoe.png" class="interpolation-image" /> -->
             </p>
           </div>
           <div class="column has-text-centered">
