@@ -29,7 +29,7 @@
       var img = document.getElementById("interactive-img");
       img.src = "media/interactive/" + 
                   task + 
-                  ".png"
+                  "_crop.png"
 
       var html_1 = document.getElementById("interactive-html-1");
       html_1.src = "media/interactive/" + 
@@ -317,19 +317,20 @@
       </div>
 
       <div class="columns">
-        <div class="column is-half has-text-centered">
+        <div class="column has-text-centered">
           <p style="text-align:center;">
-            <img id="interactive-img", src="media/interactive/shoe.png" class="interpolation-image" />
+            <!-- <img id="interactive-img", src="media/interactive/shoe_crop.png" class="interpolation-image" /> -->
+            <iframe id="interactive-img" src="media/interactive/shoe_crop.png" width=320 height=320 frameborder="0"></iframe>
           </p>
         </div>
         <div class="column has-text-centered">
-          <iframe id="interactive-html-1" src="media/interactive/shoe_mask.html" width="100%" height="600" frameborder="0"></iframe>
+          <iframe id="interactive-html-1" src="media/interactive/shoe_mask.html" width=400 height=300 frameborder="0"></iframe>
           <p style="text-align:center;">
             Mask Field
           </p>
         </div>
         <div class="column has-text-centered" id="second-iframe-container">
-          <iframe id="interactive-html-2" src="media/interactive/shoe_feature.html" width="100%" height="600" frameborder="0"></iframe>
+          <iframe id="interactive-html-2" src="media/interactive/shoe_feature.html" width=400 height=300 frameborder="0"></iframe>
           <p style="text-align:center;">
             Descriptor Field
           </p>
