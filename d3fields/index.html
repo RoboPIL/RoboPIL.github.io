@@ -41,6 +41,22 @@
                   task + 
                   "_feature.html"
     }
+    
+    function updateTracking() {
+      var task = document.getElementById("tracking-menu").value;
+
+      console.log("interactive", task)
+
+      var vid = document.getElementById("tracking-vid");
+      vid.src = "media/interactive/" + 
+                  task + 
+                  ".mp4"
+
+      var html_1 = document.getElementById("tracking-html");
+      html_1.src = "media/interactive/" + 
+                  task + 
+                  ".html"
+    }
 
 
 
@@ -336,6 +352,42 @@
           </p>
         </div>
       </div>
+
+      <br>
+
+      <div class="columns">
+        <div class="column has-text-centered">
+
+          Visualize tracking for 
+          <div class="select is-small is-rounded">     
+            <select id="tracking-menu" onchange="updateTracking()">
+            <option value="example_1" selected="selected">example 1</option>
+            <option value="example_2">example 2</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="columns">
+        <div class="column is-half has-text-centered">
+          <p style="text-align:center;">
+            <video id="tracking-vid" width="100%" height="100%" controls autoplay loop muted>
+              <source src="media/interactive/example_1.mp4" type="video/mp4">
+            </video>
+            3D Tracking Visualization (Projected to Image Space)
+          </p>
+          </p>
+        </div>
+        <div class="column is-half has-text-centered">
+          <iframe id="tracking-html" src="media/interactive/example_1.html" width=500 height=315 frameborder="0"></iframe>
+          <p style="text-align:center;">
+            3D Tracking Trace Visualization
+          </p>
+        </div>
+      </div>
+
+
     </div>
   </div>
 </section>
