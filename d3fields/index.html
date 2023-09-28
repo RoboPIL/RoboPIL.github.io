@@ -116,11 +116,21 @@
             <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign,</span>
             <span class="author-block"><sup>2</sup>Stanford University,</span>
             <span class="author-block"><sup>3</sup>National University of Singapore</span><br>
-            <small>(* indicate equal contribution)</small><br><br>
+            <small>(* indicate equal contribution)</small>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="d3fields.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
 
             <!-- Arxiv Link. -->
             <span class="link-block">
@@ -129,7 +139,18 @@
                 <span class="icon">
                     <i class="fas fa-file"></i>
                 </span>
-                <span>ArXiv</span>
+                <span>ArXiv (Coming Soon)</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://youtu.be/yNkIOwAO3GA"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
               </a>
             </span>
 
@@ -446,14 +467,14 @@
 </section> -->
 
 
-<!-- <section class="section">
+<section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
       <h2 class="title is-3">Execution under Disturbances</h2>
       
       <p class="content has-text-justified">
-        Because the language model output stays the same throughout the task, we can cache its output and re-evaluate the generated code using closed-loop visual feedback, which enables fast replanning using MPC. This enables VoxPoser to be robust to online disturbances.
+        Our framework is robust to external disturbances. We show that our framework could recover from disturbances in the following videos.
       </p>
       
       <div class="columns">
@@ -464,12 +485,9 @@
             autoplay
             loop
             width="99%">
-            <source src="media/videos/sort-trash-to-tray-dist.mp4" 
+            <source src="media/videos/perturbation_shoe.mp4" 
             type="video/mp4">
           </video>
-          <p style="text-align:center">
-            "Sort the paper trash into the blue tray."
-          </p>
         </div>
     
         <div class="column has-text-centered">
@@ -479,18 +497,15 @@
             autoplay
             loop
             width="99%">
-            <source src="media/videos/close-top-drawer-dist.mp4" 
+            <source src="media/videos/perturbation_utensils.mp4" 
             type="video/mp4">
           </video>
-          <p style="text-align:center">
-            "Close the top drawer."
-          </p>
         </div>
   </div>
   </div>
 </section>
 
-<section class="section">
+<!-- <section class="section">
   <div class="container is-max-widescreen">
 
     <div class="rows">
