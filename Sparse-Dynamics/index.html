@@ -53,9 +53,9 @@
             <span class="author-block">
               <a href="https://ziangliu.com">Ziang Liu</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://g9zhou.github.io/sparse-dynamics/">Jeff He</a><sup>2</sup>,</span>
+              <a href="https://robopil.github.io/Sparse-Dynamics/">Genggeng Zhou</a><sup>2*</sup>,</span>
             <span class="author-block">
-              <a href="https://g9zhou.github.io/sparse-dynamics/">Genggeng Zhou</a><sup>2</sup>,</span>
+              <a href="https://robopil.github.io/Sparse-Dynamics/">Jeff He</a><sup>2*</sup>,</span>
             <span class="author-block">
               <a href="https://tobiamarcucci.github.io">Tobia Marcucci</a><sup>3</sup>,</span>
             <span class="author-block">
@@ -72,13 +72,14 @@
             <span class="author-block"><sup>2</sup>Stanford University, </span>
             <span class="author-block"><sup>3</sup>Massachusetts Institute of Technology, </span>
             <span class="author-block"><sup>4</sup>University of Illinois Urbana-Champaign </span>
+            <p>* denotes equal contribution </p>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://g9zhou.github.io/sparse-dynamics/"
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -87,7 +88,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://g9zhou.github.io/sparse-dynamics/"
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -97,7 +98,7 @@
               </span>
               <!-- Video Link. -->
               <!-- <span class="link-block">
-                <a href="https://g9zhou.github.io/sparse-dynamics/"
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -107,7 +108,7 @@
               </span> -->
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://g9zhou.github.io/sparse-dynamics/"
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -132,7 +133,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <p>Our framework <strong>sparsifies</strong> neural dynamics models for more effective closed-loop, model-based planning using the <strong>mixed-integer</strong> formulation. </p>
+        <p>Our framework <strong>sparsifies</strong> neural dynamics models for more effective closed-loop, model-based planning using the <strong>mixed-integer optimization</strong>. </p>
       </h2>
     </div>
   </div>
@@ -196,7 +197,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Learning predictive models from observations using deep neural networks (DNNs) is a promising new approach to many real-world planning and control problems. 
+            Learning predictive models from observations using deep neural networks~(DNNs) is a promising new approach to many real-world planning and control problems. 
             However, common DNNs are too unstructured for effective planning, and current control methods typically rely on extensive sampling or local gradient descent. 
             In this paper, we propose a new framework for integrated model learning and predictive control that is amenable to efficient optimization algorithms. 
             Specifically, we start with a ReLU neural model of the system dynamics and, with minimal losses in prediction accuracy, we gradually sparsify it by removing redundant neurons. 
@@ -258,7 +259,6 @@
                       type="video/mp4">
             </video>
           </div>
-
         </div>
       </div>
     </div> -->
@@ -276,7 +276,7 @@
         </br>
         <p class="content has-text-justified">
           <strong>Model-based control with sparse neural dynamics.</strong>
-          (a) Our framework sparsifies the neural dynamics models by either removing the neuron or replacing the ReLU activation function with identity mapping (ID). 
+          (a) Our framework sparsifies the neural dynamics models by either removing neurons or replacing ReLU activation functions with identity mappings (ID). 
           (b) The sparsified models enable the use of efficient MIP methods for planning, which can achieve better closed-loop performance than sampling-based alternatives commonly used in model-based RL. 
           (c) We evaluate our framework on various dynamical systems that involve complex contact dynamics, including tasks like object pushing and sorting, and manipulating a deformable rope.
           </p>
@@ -330,46 +330,47 @@
       </div>
     </div>
     <!--/ Tasks. -->
-  </div>
-</section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <h3 class="title is-4">Execution under Disturbances</h3>
-      <div id="results-carousel" class="carousel-1 results-carousel">
-        <div class="item item-push">
-          <video poster="" id="push" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/disturbance_1.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-rope">
-          <video poster="" id="rope" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/disturbance_2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-sort">
-          <video poster="" id="sort" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/disturbance_3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
+    <h3 class="title is-4">Execution under Disturbances</h3>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="100%">
+        <source src="./static/videos/disturbance.mp4"
+                type="video/mp4">
+      </video>
     </div>
   </div>
 </section>
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h3 class="title is-4">Execution under Disturbances</h3>
+      <div class="columns is-vcentered  is-centered">
+        <video id="disturbance" autoplay muted loop height="60%" width="60%">
+          <source src="./static/videos/disturbance.mp4"
+                  type="video/mp4">
+        </video>
+        </br>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{liu2023sparsedynamics,
-  author    = {Liu, Ziang and He, Jeff and Zhou, Genggeng and Marcucci, Tobia and Li, Fei-Fei and Wu, Jiajun and Li, Yunzhu},
+    <pre><code>@inproceedings{liu2023modelbased,
   title     = {Model-Based Control with Sparse Neural Dynamics},
-  journal   = {NeurIPS},
+  author    = {Liu, Ziang and Zhou, Genggeng and He, Jeff and Marcucci, Tobia and Li, Fei-Fei and Wu, Jiajun and Li, Yunzhu},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems},
   year      = {2023},
+  url       = {https://openreview.net/forum?id=ymBG2xs9Zf}
 }</code></pre>
   </div>
 </section>
