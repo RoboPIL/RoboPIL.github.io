@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Sparsify neural dynamics models for more effective closed-loop, model-based planning using the mixed-integer formulation">
+  <meta name="keywords" content="model learning, model-based control, neural network sparsification, mixed-integer programming, trajectory optimization">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Model-Based Control with Sparse Neural Dynamics</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Model-Based Control with Sparse Neural Dynamics</h1>
+          <h3 class="title is-4 conference-authors"><a target="_blank" href="https://nips.cc/">NeurIPS 2023</a></h3>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://ziangliu.com">Ziang Liu</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://robopil.github.io/Sparse-Dynamics/">Genggeng Zhou</a><sup>2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://robopil.github.io/Sparse-Dynamics/">Jeff He</a><sup>2*</sup>,</span>
+            <span class="author-block">
+              <a href="https://tobiamarcucci.github.io">Tobia Marcucci</a><sup>3</sup>,</span>
+            <span class="author-block">
+              <a href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jiajunwu.com/">Jiajun Wu</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>2,4</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Cornell University, </span>
+            <span class="author-block"><sup>2</sup>Stanford University, </span>
+            <span class="author-block"><sup>3</sup>Massachusetts Institute of Technology, </span>
+            <span class="author-block"><sup>4</sup>University of Illinois Urbana-Champaign </span>
+            <p>* denotes equal contribution </p>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/model_based_control_with_sparse_neural_dynamics.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (Coming Soon)</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://robopil.github.io/Sparse-Dynamics/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/neurips.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <p>Our framework <strong>sparsifies</strong> neural dynamics models for more effective closed-loop, model-based planning using the <strong>mixed-integer optimization</strong>. </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel-3 results-carousel">
+        <div class="item item-push">
+          <video poster="" id="push" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/object_pushing_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-rope">
+          <video poster="" id="rope" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rope_manipulation_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-sort">
+          <video poster="" id="sort" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/object_sorting_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-push">
+          <video poster="" id="push" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/object_pushing_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-rope">
+          <video poster="" id="rope" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/rope_manipulation_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-sort">
+          <video poster="" id="sort" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/object_sorting_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered">
+        <p>Our framework is capable of handling a variety of manipulation tasks. </p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Learning predictive models from observations using deep neural networks~(DNNs) is a promising new approach to many real-world planning and control problems. 
+            However, common DNNs are too unstructured for effective planning, and current control methods typically rely on extensive sampling or local gradient descent. 
+            In this paper, we propose a new framework for integrated model learning and predictive control that is amenable to efficient optimization algorithms. 
+            Specifically, we start with a ReLU neural model of the system dynamics and, with minimal losses in prediction accuracy, we gradually sparsify it by removing redundant neurons. 
+            This discrete sparsification process is approximated as a continuous problem, enabling an end-to-end optimization of both the model architecture and the weight parameters. 
+            The sparsified model is subsequently used by a mixed-integer predictive controller, which represents the neuron activations as binary variables and employs efficient branch-and-bound algorithms. 
+            Our framework is applicable to a wide variety of DNNs, from simple multilayer perceptrons to complex graph neural dynamics. 
+            It can efficiently handle tasks involving complicated contact dynamics, such as object pushing, compositional object sorting, and manipulation of deformable objects. 
+            Numerical and hardware experiments show that, despite the aggressive sparsification, our framework can deliver better closed-loop performance than existing state-of-the-art methods.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- <div class="columns is-centered">
+
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Visual Effects</h2>
+          <p>
+            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
+            would be impossible without nerfies since it would require going through a wall.
+          </p>
+          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/dollyzoom-stacked.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+      <div class="column">
+        <h2 class="title is-3">Matting</h2>
+        <div class="columns is-centered">
+          <div class="column content">
+            <p>
+              As a byproduct of our method, we can also solve the matting problem by ignoring
+              samples that fall outside of a bounding box during rendering.
+            </p>
+            <video id="matting-video" controls playsinline height="100%">
+              <source src="./static/videos/matting.mp4"
+                      type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Method. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Framework</h2>
+
+        <!-- Framework. -->
+        <div class="content has-text-justified">
+        </div>
+        <img src="./static/images/teaser_v2.jpg" class="teaser-image">
+        </br>
+        </br>
+        <p class="content has-text-justified">
+          <strong>Model-based control with sparse neural dynamics.</strong>
+          (a) Our framework sparsifies the neural dynamics models by either removing neurons or replacing ReLU activation functions with identity mappings (ID). 
+          (b) The sparsified models enable the use of efficient MIP methods for planning, which can achieve better closed-loop performance than sampling-based alternatives commonly used in model-based RL. 
+          (c) We evaluate our framework on various dynamical systems that involve complex contact dynamics, including tasks like object pushing and sorting, and manipulating a deformable rope.
+          </p>
+
+        </br>
+        </br>
+        <!--/ Framework. -->
+      </div>
+    </div>
+    <!--/ Method. -->
+
+    <!-- Tasks. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Tasks</h2>
+
+        <!-- Piecewise affine function. -->
+        <h3 class="title is-4">Piecewise Affine Function</h3>
+        <div class="content has-text-justified">
+        </div>
+        <img src="./static/images/quali_pwa_v2.jpg" class="quali-pwa">
+        </br>
+        </br>
+        <p class="content has-text-justified">
+          <strong>Recover the ground truth piecewise affine functions from data.</strong>
+          We evaluate our sparsification pipeline on two hand-designed piecewise affine functions composed of four linear pieces. 
+          Our pipeline successfully generates sparsified models with 2 ReLUs that accurately fit the data, determine the region partition, and recover the underlying ground truth system.
+          </p>
+
+        </br>
+        </br>
+        <!--/ Piecewise affine function. -->
+
+        <!-- Object Manipulation. -->
+        <h3 class="title is-4">Object Manipulation</h3>
+        <div class="content has-text-justified">
+        </div>
+        <img src="./static/images/quali_control_v4.jpg" class="quali-control">
+        </br>
+        </br>
+        <p class="content has-text-justified">
+          <strong>Qualitative results on closed-loop feedback control.</strong>
+          (a) In object pushing, the objective is to manipulate the object to reach a randomly generated target pose, depicted as transparent in the first column. The second column illustrates how the planner, using the sparsified model, can leverage feedback from the environment to compensate for the modeling errors and accurately achieve the target.
+          (b) The framework is also applicable to rope manipulation. Our sparsified model, in conjunction with the MIP formulation, facilitates closed-loop feedback planning to manipulate the rope into desired configurations.
+          (c) Our framework also consistently succeeds in object sorting tasks that involve complex contact events. Using the same model with the MIP formulation, the system can manipulate up to eight objects, sorting them into their respective regions.
+          </p>
+
+        </br>
+        </br>
+        <!--/ Object Manipulation. -->
+      </div>
+    </div>
+    <!--/ Tasks. -->
+
+    <h3 class="title is-4">Execution under Disturbances</h3>
+    <div class="content has-text-centered">
+      <video id="replay-video"
+              controls
+              muted
+              preload
+              playsinline
+              width="100%">
+        <source src="./static/videos/disturbance.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h3 class="title is-4">Execution under Disturbances</h3>
+      <div class="columns is-vcentered  is-centered">
+        <video id="disturbance" autoplay muted loop height="60%" width="60%">
+          <source src="./static/videos/disturbance.mp4"
+                  type="video/mp4">
+        </video>
+        </br>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@inproceedings{liu2023modelbased,
+  title     = {Model-Based Control with Sparse Neural Dynamics},
+  author    = {Liu, Ziang and Zhou, Genggeng and He, Jeff and Marcucci, Tobia and Fei-Fei, Li and Wu, Jiajun and Li, Yunzhu},
+  booktitle = {Thirty-seventh Conference on Neural Information Processing Systems},
+  year      = {2023},
+  url       = {https://openreview.net/forum?id=ymBG2xs9Zf}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          Website template borrowed from <a
+            href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
