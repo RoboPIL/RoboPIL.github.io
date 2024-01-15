@@ -1,0 +1,749 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159856695-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-159856695-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="utaustin,course,artificial intelligence,robotics,robot learning">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <title>CS598YL: CS598YL: Special Topics in Robot Learning</title>
+    <link rel="icon"  href="resources/favicon.ico" />
+    <link rel="shortcut icon"  href="resources/favicon.ico" />
+
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+	    <div class="container">
+      <a class="navbar-brand" href="index.html">CS598YL - Spring 2024</a>
+      <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> -->
+
+      <div class="collapse navbar-collapse" id="navbarToggle">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="logistics.html">Logistics</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="syllabus.html">Syllabus</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="project.html">Course Project</a>
+            </li>
+          </ul>
+      </div>
+      </div>
+    </nav>
+
+    <div class="content">
+
+      <div class="bg-no-highlight">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-11">
+              <h2>Syllabus</h2>
+            </div>
+          </div>
+          <div class="section">
+            <div class="row">
+              <div class="col-md-12">
+                <h4>Schedule</h4>
+                Readings: &#9679; required &nbsp; &#9675; optional
+                <br><br>
+                <!-- <h6>Note: The reading list is subject to change prior to the start of the course.</h6> -->
+                <div class="row" style="margin-top:20px;">
+                  <div class="col-md-12">
+                    <table class="table" id="schedule">
+
+                      <tr class="schedule-header">
+                        <th>Date</th><th>Topic</th><th>Presenters</th><th>Notes</th>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 1</strong><br>Tues, Jan 16</td>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Course Overview</p>
+                          <!-- <ul class="optional-reading">
+                            <li class="no-review"><a href="https://arxiv.org/abs/1604.00289">Building Machines That Learn and Think Like People</a>. Brenden M. Lake, Tomer D. Ullman, Joshua B. Tenenbaum, Samuel J. Gershman (2016)</li>
+                            <li><a href="https://people.csail.mit.edu/brooks/papers/AIM-1293.pdf">Intelligence without Reason</a>. Rodney Brooks (1991)</li>
+                          </ul> -->
+                        </td>
+                        <td class="presenters-cell">
+
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/lecture_intro.pdf">[slides]</a> -->
+                        </td>
+                      </tr>
+
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 1</strong><br>Thur, Jan 18</td>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Computer Vision Basics</p>
+                          <!-- <ul class="optional-reading">
+                            <li class="no-review"><a href="https://arxiv.org/abs/1804.06557">The Limits and Potentials of Deep Learning for Robotics</a>. Niko Sünderhauf, Oliver Brock, Walter Scheirer, Raia Hadsell, Dieter Fox, Jürgen Leitner, Ben Upcroft, Pieter Abbeel, Wolfram Burgard, Michael Milford, Peter Corke (2018)</li>
+                            <li><a href="https://www.ncbi.nlm.nih.gov/pubmed/12239892">A Sensorimotor Account of Vision and Visual Consciousness</a>. Kevin O'Regan and Alva Noë (2001)</li>
+                          </ul> -->
+                        </td>
+                        <td class="presenters-cell">
+
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/lecture_robot_perception.pdf">[slides]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 2</strong><br>Tues, Jan 23</td>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Robotics Basics</p>
+                        </td>
+                        <td class="presenters-cell">
+                          <!-- Shuhan<br>Shivang -->
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-02_Shuhan.pdf">[talk #1]</a><br><a href="slides/pre_09-02_Shivang.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 2</strong><br>Thur, Jan 25</td>
+                        <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Machine Learning Basics</p>
+                        </td>
+                        <td class="presenters-cell">
+                          <!-- Liangchen<br>Xingchao -->
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-07_Liangchen.pdf">[talk #1]</a><br><a href="slides/pre_09-07_Xingchao.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row chapter-row">
+                        <td class="date-cell" colspan="5"><strong>Part I: Robot Perception</strong></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 3</strong><br>Tues, Jan 30</td>
+                          <td class="topic-cell"><p>2D Perception</p>
+                            <ul>
+                              <li><a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a>. Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin (2021) [Presenter: Pending]</li>
+                              <li><a href="https://arxiv.org/abs/2304.02643">Segment Anything</a>. Alexander Kirillov, Eric Mintun, Nikhila Ravi, Hanzi Mao, Chloe Rolland, Laura Gustafson, Tete Xiao, Spencer Whitehead, Alexander C. Berg, Wan-Yen Lo, Piotr Dollár, Ross Girshick (2023) [Presenter: Pending]</li>
+                            </ul>
+                            <ul class="optional-reading">
+                              <li><a href="https://arxiv.org/abs/1703.06870">Mask R-CNN</a>. Kaiming He, Georgia Gkioxari, Piotr Dollar, Ross Girshick (2017)</li>
+                              <li><a href="https://arxiv.org/abs/2304.07193">DINOv2: Learning Robust Visual Features without Supervision</a>. Maxime Oquab, Timothée Darcet, Théo Moutakanni, Huy Vo, Marc Szafraniec, Vasil Khalidov, Pierre Fernandez, Daniel Haziza, Francisco Massa, Alaaeldin El-Nouby, Mahmoud Assran, Nicolas Ballas, Wojciech Galuba, Russell Howes, Po-Yao Huang, Shang-Wen Li, Ishan Misra, Michael Rabbat, Vasu Sharma, Gabriel Synnaeve, Hu Xu, Hervé Jegou, Julien Mairal, Patrick Labatut, Armand Joulin, Piotr Bojanowski (2023)</li>
+                            </ul>
+                        </td>
+                        <td class="presenters-cell">
+                            Pending<br>
+                            Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-09_Zhenyu.pdf">[talk #1]</a><br><a href="slides/pre_09-09_Kevin.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+                      
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 3</strong><br>Thur, Feb 1</td>
+                        <td class="topic-cell"><p>3D Perception</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1706.02413">PointNet++: Deep Hierarchical Feature Learning on Point Sets in a Metric Space</a>. Charles R. Qi, Li Yi, Hao Su, Leonidas J. Guibas (2017) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/1711.00199">PoseCNN: A Convolutional Neural Network for 6D Object Pose Estimation in Cluttered Scenes</a>. Yu Xiang, Tanner Schmidt, Venkatraman Narayanan, Dieter Fox (2018) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class="optional-reading">
+                            <li><a href="https://arxiv.org/abs/1801.07829">Dynamic Graph CNN for Learning on Point Clouds</a>. Yue Wang, Yongbin Sun, Ziwei Liu, Sanjay E. Sarma, Michael M. Bronstein, Justin M. Solomon (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1804.00175">DeepIM: Deep Iterative Matching for 6D Pose Estimation</a>. Yi Li, Gu Wang, Xiangyang Ji, Yu Xiang, Dieter Fox (2018)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/tutorial_09-08_robosuite_intro.pdf">[intro]</a> <a href="slides/tutorial_09-08_robosuite_usage.pdf">[usage]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 4</strong><br>Tues, Feb 2</td>
+                        <td class="topic-cell"><p>Representation Learning for Robotics</p>
+                        <ul>
+                          <li><a href="https://arxiv.org/abs/1806.08756">Dense Object Nets: Learning Dense Visual Object Descriptors By and For Robotic Manipulation</a>. Peter R. Florence, Lucas Manuelli, Russ Tedrake (2018) [Presenter: Pending]</li>
+                          <li><a href="https://arxiv.org/abs/2309.16118">D<sup>3</sup>Fields: Dynamic 3D Descriptor Fields for Zero-Shot Generalizable Robotic Manipulation</a>. Yixuan Wang*, Zhuoran Li*, Mingtong Zhang, Katherine Driggs-Campbell, Jiajun Wu, Li Fei-Fei, Yunzhu Li (2023) [Presenter: Pending]</li>
+                        </ul>
+                        <ul class=optional-reading>
+                          <li><a href="https://arxiv.org/abs/1911.05722">Momentum Contrast for Unsupervised Visual Representation Learning</a>. Kaiming He, Haoqi Fan, Yuxin Wu, Saining Xie, Ross Girshick (2019)</li>
+                          <li><a href="https://arxiv.org/abs/2104.14294">Emerging Properties in Self-Supervised Vision Transformers</a>. Mathilde Caron, Hugo Touvron, Ishan Misra, Hervé Jégou, Julien Mairal, Piotr Bojanowski, Armand Joulin (2021)</li>
+                        </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-09_Zhenyu.pdf">[talk #1]</a><br><a href="slides/pre_09-09_Kevin.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 4</strong><br>Thur, Feb 8</td>
+                        <td class="topic-cell"><p>Model Learning for Robotics</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1810.01566">Learning Particle Dynamics for Manipulating Rigid Bodies, Deformable Objects, and Fluids</a>. Yunzhu Li, Jiajun Wu, Russ Tedrake, Joshua B. Tenenbaum, Antonio Torralba (2019) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2306.16700">Dynamic-Resolution Model Learning for Object Pile Manipulation</a>. Yixuan Wang*, Yunzhu Li*, Katherine Driggs-Campbell, Li Fei-Fei, Jiajun Wu (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2206.02881">Mesh-based Dynamics with Occlusion Reasoning for Cloth Manipulation</a>. Zixuan Huang, Xingyu Lin, David Held (2022)</li>
+                            <!-- <li><a href="https://arxiv.org/abs/2306.14447">RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</a>. Haochen Shi, Huazhe Xu, Samuel Clarke, Yunzhu Li, Jiajun Wu (2023)</li> -->
+                            <li><a href="https://arxiv.org/abs/2010.03409">Learning Mesh-Based Simulation with Graph Networks</a>. Tobias Pfaff, Meire Fortunato, Alvaro Sanchez-Gonzalez, Peter W. Battaglia (2020)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-23_Ye.pdf">[talk #1]</a><br><a href="slides/pre_09-23_Changan.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 5</strong><br>Tues, Feb 13</td>
+                        <td class="topic-cell"><p>Neural Fields</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2308.07931">Distilled Feature Fields Enable Few-Shot Language-Guided Manipulation</a>. William Shen*, Ge Yang*, Alan Yu, Jansen Wong, Leslie Kaelbling, Phillip Isola (2023) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2107.04004">3D Neural Scene Representations for Visuomotor Control</a>. Yunzhu Li, Shuang Li, Vincent Sitzmann, Pulkit Agrawal, Antonio Torralba (2021) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://edgarsucar.github.io/iMAP/">iMAP: Implicit Mapping and Positioning in Real-Time</a>. Edgar Sucar, Shikun Liu, Joseph Ortiz, Andrew J. Davison (2021)</li>
+                            <li><a href="https://arxiv.org/abs/2202.11855">Learning Multi-Object Dynamics with Compositional Neural Radiance Fields</a>. Danny Driess, Zhiao Huang, Yunzhu Li, Russ Tedrake, Marc Toussaint (2022)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-23_Ye.pdf">[talk #1]</a><br><a href="slides/pre_09-23_Changan.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 5</strong><br>Thur, Feb 15</td>
+                        <td class="topic-cell"><p>Multimodal Perception</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1810.10191">Making Sense of Vision and Touch: Self-Supervised Learning of Multimodal Representations for Contact-Rich Tasks</a>. Michelle A. Lee*, Yuke Zhu*, Krishnan Srinivasan, Parth Shah, Silvio Savarese, Li Fei-Fei, Animesh Garg, Jeannette Bohg (2018) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/1910.02860">Cable Manipulation with a Tactile-Reactive Gripper</a>. Yu She, Shaoxiong Wang, Siyuan Dong, Neha Sunil, Alberto Rodriguez, Edward Adelson (2019) [Presenter: Pending]</li>
+
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://www.science.org/doi/pdf/10.1126/scirobotics.aav3123">See, Feel, Act: Hierarchical Learning for Complex Manipulation Skills with Multisensory Fusion</a>. Nima Fazeli, Miquel Oller, Jiajun Wu, Zheng Wu, Joshua B Tenenbaum, Alberto Rodriguez (2019)</li>
+                            <li><a href="https://arxiv.org/pdf/1805.11085">More Than a Feeling: Learning to Grasp and Regrasp Using Vision and Touch</a>. Roberto Calandra, Andrew Owens, Dinesh Jayaraman, Justin Lin, Wenzhen Yuan, Jitendra Malik, Edward H. Adelson, Sergey Levine (2018)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_09-28_Gerardo.pdf">[talk #1]</a><br><a href="slides/pre_09-28_Amanda.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+                      
+                      <!-- <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 6</strong><br>Tues, Sept 27</td>
+                        <td class="topic-cell"><p>State Estimation</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1805.11122">Differentiable Particle Filters: End-to-End Learning with Algorithmic Priors</a>. Rico Jonschkowski, Divyam Rastogi, Oliver Brock (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1901.04780">DenseFusion: 6D Object Pose Estimation by Iterative Dense Fusion</a>. Chen Wang, Danfei Xu, Yuke Zhu, Roberto Martín-Martín, Cewu Lu, Li Fei-Fei, Silvio Savarese (2019)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1805.08975">Particle Filter Networks with Application to Visual Localization</a>. Peter Karkus, David Hsu, Wee Sun Lee (2018)</li>
+                            <li><a href="https://arxiv.org/abs/1809.10790">Deep Object Pose Estimation for Semantic Robotic Grasping of Household Objects</a>. Jonathan Tremblay, Thang To, Balakumar Sundaralingam, Yu Xiang, Dieter Fox, Stan Birchfield (2018)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Gunjan<br>Jay
+                        </td>
+                        <td class="notes-cell">
+                          <a href="slides/pre_09-14_Gunjan.pdf">[talk #1]</a><br><a href="slides/pre_09-14_Jay.pdf">[talk #2]</a>
+                        </td>
+                      </tr> -->
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 6</strong><br>Tues, Feb 20</td>
+                        <!-- <td class="topic-cell"><p><span class="label label-lecture text-base">Lecture</span> Overview of Robot Decision Making</p> -->
+                        <td class="topic-cell"><p>Visual Tracking</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2307.07635">CoTracker: It is Better to Track Together</a>. Nikita Karaev, Ignacio Rocco, Benjamin Graham, Natalia Neverova, Andrea Vedaldi, Christian Rupprecht (2023) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2306.05422">Tracking Everything Everywhere All at Once</a>. Qianqian Wang, Yen-Yu Chang, Ruojin Cai, Zhengqi Li, Bharath Hariharan, Aleksander Holynski, Noah Snavely (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2205.03721">Category-Independent Articulated Object Tracking with Factor Graphs</a>. Nick Heppert, Toki Migimatsu, Brent Yi, Claire Chen, Jeannette Bohg (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2112.04477">Tracking People by Predicting 3D Appearance, Location & Pose</a>. Jathushan Rajasegaran, Georgios Pavlakos, Angjoo Kanazawa, Jitendra Malik (2021)</li>
+                          </ul>
+                          <!-- <ul class=optional-reading>
+                            <li class="no-review"><a href="https://www.ias.informatik.tu-darmstadt.de/uploads/Publications/Kober_IJRR_2013.pdf">Reinforcement Learning in Robotics: A Survey</a>. Jens Kober, J. Andrew Bagnell, Jan Peters (2013)</li>
+                            <li><a href="https://www.annualreviews.org/doi/10.1146/annurev-control-100819-063206">Recent Advances in Robot Learning from Demonstration</a>. Harish Ravichandar, Athanasios S. Polydoros, Sonia Chernova, Aude Billard (2020)</li>
+                          </ul> -->
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/lecture_robot_decision_making.pdf">[slides]</a> -->
+                        </td>
+                      </tr>
+                      
+                      <tr class="schedule-row chapter-row">
+                        <td class="date-cell" colspan="5" style="text-align:center;"><strong>Part II: Robot Decision Making</strong></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 6</strong><br>Thur, Feb 22</td>
+                        <td class="topic-cell"><p>Grasping</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1905.10520">6-DOF GraspNet: Variational Grasp Generation for Object Manipulation</a>. Arsalan Mousavian, Clemens Eppner, Dieter Fox (2019) [Presenter: Pending]</li>
+                            <li><a href="https://ieeexplore.ieee.org/abstract/document/7487342">Dex-Net 1.0: A cloud-based network of 3D objects for robust grasp planning using a Multi-Armed Bandit model with correlated rewards</a>. Jeffrey Mahler, Florian T Pokorny, Brian Hou, Melrose Roderick, Michael Laskey, Mathieu Aubry, Kai Kohlhoff, Torsten Kröger, James Kuffner, Ken Goldberg (2016) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1707.06347">UniDexGrasp++: Improving Dexterous Grasping Policy Learning via Geometry-aware Curriculum and Iterative Generalist-Specialist Learning</a>. Weikang Wan*, Haoran Geng*, Yun Liu, Zikang Shan, Yaodong Yang, Li Yi, He Wang (2023)</li>
+                            <li><a href="https://arxiv.org/abs/1703.09312">Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics</a>. Jeffrey Mahler, Jacky Liang, Sherdil Niyaz, Michael Laskey, Richard Doan, Xinyu Liu, Juan Aparicio Ojea, Ken Goldberg (2017)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_10-12_Puyuan.pdf">[talk #1]</a><br><a href="slides/pre_10-12_Zizhao.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 7</strong><br>Tues, Feb 27</td>
+                        <td class="topic-cell"><p>Visual Affordance for Manipulation</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2010.14406">Transporter Networks: Rearranging the Visual World for Robotic Manipulation</a>. Andy Zeng, Pete Florence, Jonathan Tompson, Stefan Welker, Jonathan Chien, Maria Attarian, Travis Armstrong, Ivan Krasin, Dan Duong, Ayzaan Wahid, Vikas Sindhwani, Johnny Lee (2020) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/1903.11239">TossingBot: Learning to Throw Arbitrary Objects with Residual Physics</a>. Andy Zeng, Shuran Song, Johnny Lee, Alberto Rodriguez, Thomas Funkhouser (2019) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2101.02692">Where2Act: From Pixels to Actions for Articulated 3D Objects</a>. Kaichun Mo, Leonidas Guibas, Mustafa Mukadam, Abhinav Gupta, Shubham Tulsiani (2021)</li>
+                            <li><a href="https://arxiv.org/abs/2009.01439">Learning Dexterous Grasping with Object-Centric Visual Affordances</a>. Priyanka Mandikal, Kristen Grauman (2020)</li>
+                            <!-- <li><a href="https://arxiv.org/abs/1907.02057">Benchmarking Model-Based Reinforcement Learning</a>. Tingwu Wang, Xuchan Bao, Ignasi Clavera, Jerrick Hoang, Yeming Wen, Eric Langlois, Shunshi Zhang, Guodong Zhang, Pieter Abbeel, Jimmy Ba (2019)</li> -->
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_10-12_Puyuan.pdf">[talk #1]</a><br><a href="slides/pre_10-12_Zizhao.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 7</strong><br>Thur, Feb 29</td>
+                        <td class="topic-cell"><p>Imitation Learning</p>
+                          <ul>
+                            <!-- IBC -->
+                            <li><a href="https://arxiv.org/abs/2304.13705">Learning Fine-Grained Bimanual Manipulation with Low-Cost Hardware</a>. Tony Z. Zhao, Vikash Kumar, Sergey Levine, Chelsea Finn (2023) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2303.04137">Diffusion Policy: Visuomotor Policy Learning via Action Diffusion</a>. Cheng Chi, Siyuan Feng, Yilun Du, Zhenjia Xu, Eric Cousineau, Benjamin Burchfiel, Shuran Song (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1710.04615">Deep Imitation Learning for Complex Manipulation Tasks from Virtual Reality Teleoperation</a>. Tianhao Zhang, Zoe McCarthy, Owen Jow, Dennis Lee, Xi Chen, Ken Goldberg, Pieter Abbeel (2017)</li>
+                            <!-- <li><a href="https://arxiv.org/abs/1011.0686">Implicit Behavioral Cloning</a>. Pete Florence, Corey Lynch, Andy Zeng, Oscar Ramirez, Ayzaan Wahid, Laura Downs, Adrian Wong, Johnny Lee, Igor Mordatch, Jonathan Tompson (2021)</li> -->
+                            <li><a href="https://arxiv.org/abs/2302.12422">MimicPlay: Long-Horizon Imitation Learning by Watching Human Play</a>. Chen Wang, Linxi Fan, Jiankai Sun, Ruohan Zhang, Li Fei-Fei, Danfei Xu, Yuke Zhu, Anima Anandkumar (2023)</li>
+                            <li><a href="https://arxiv.org/abs/1709.07174">Agile Autonomous Driving using End-to-End Deep Imitation Learning</a>. Yunpeng Pan, Ching-An Cheng, Kamil Saigol, Keuntaek Lee, Xinyan Yan, Evangelos A. Theodorou, and Byron Boots (2017)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell"><br>
+                          <!-- <a href="slides/pre_10-21_Amit.pdf">[talk #1]</a><br><a href="slides/pre_10-21_Carlos.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <!-- <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 8</strong><br>Thur, Oct 13</td>
+                        <td class="topic-cell"><p>Model-Predictive Control</p>
+                          <ul>
+                            <li><a href="https://ieeexplore.ieee.org/abstract/document/7989202">Information theoretic MPC for model-based reinforcement learning</a>. Grady Williams, Nolan Wagener, Brian Goldfain, Paul Drews (2017)</li>
+                            <li><a href="https://arxiv.org/abs/1910.08264">Learning Compositional Koopman Operators for Model-Based Control</a>. Yunzhu Li, Hao He, Jiajun Wu, Dina Katabi, Antonio Torralba (2020)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://ieeexplore.ieee.org/abstract/document/7487277">Aggressive driving with model predictive path integral control</a>. Grady Williams, Paul Drews, Brian Goldfain, James M. Rehg, Evangelos A. Theodorou (2016)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Puyuan<br>Zizhao
+                        </td>
+                        <td class="notes-cell">
+                          <a href="slides/pre_10-12_Puyuan.pdf">[talk #1]</a><br><a href="slides/pre_10-12_Zizhao.pdf">[talk #2]</a>
+                        </td>
+                      </tr> -->
+
+                      <tr class="schedule-row holiday-row">
+                        <td class="date-cell"><strong>Week 8</strong><br>Tues, Mar 5</td>
+                        <td class="topic-cell"><p>No Class - Attending Conference</p>
+                          <ul></ul>
+                        </td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      
+                      <!-- <tr class="schedule-row">
+                        <td class="topic-cell"><p>Offline Reinforcement Learning</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1812.02900">Off-Policy Deep Reinforcement Learning without Exploration</a>. Scott Fujimoto, David Meger, Doina Precup (2019)</li>
+                            <li><a href="https://arxiv.org/abs/2110.06169">Offline Reinforcement Learning with Implicit Q-Learning</a>. Ilya Kostrikov, Ashvin Nair, Sergey Levine (2021)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2005.01643">Offline Reinforcement Learning: Tutorial, Review, and Perspectives on Open Problems</a>. Sergey Levine, Aviral Kumar, George Tucker, Justin Fu (2020)</li>
+                            <li><a href="https://arxiv.org/abs/2005.13239">MOPO: Model-based Offline Policy Optimization</a>. Tianhe Yu, Garrett Thomas, Lantao Yu, Stefano Ermon, James Zou, Sergey Levine, Chelsea Finn, Tengyu Ma (2020)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Chang<br>Liyan
+                        </td>
+                        <td class="notes-cell">
+                          <a href="slides/pre_10-19_Chang.pdf">[talk #1]</a><br><a href="slides/pre_10-19_Liyan.pdf">[talk #2]</a>
+                        </td>
+                      </tr> -->
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 8</strong><br>Thur, Mar 7</td>
+                        <td class="topic-cell"><p>Human-in-the-Loop Learning</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2211.08416">Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment</a>. Huihan Liu, Soroush Nasiriany, Lance Zhang, Zhiyao Bao, Yuke Zhu (2022) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2311.01454">NOIR: Neural Signal Operated Intelligent Robots for Everyday Activities</a>. Ruohan Zhang, Sharon Lee, Minjune Hwang, Ayano Hiranaka, Chen Wang, Wensi Ai, Jin Jie Ryan Tan, Shreya Gupta, Yilun Hao, Gabrael Levine, Ruohan Gao, Anthony Norcia, Li Fei-Fei, Jiajun Wu (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2109.08273">ThriftyDAgger: Budget-Aware Novelty and Risk Gating for Interactive Imitation Learning</a>. Ryan Hoque, Ashwin Balakrishna, Ellen Novoseller, Albert Wilcox, Daniel S. Brown, Ken Goldberg (2021)</li>
+                            <!-- <li><a href="https://arxiv.org/abs/1707.05173">Trial without Error: Towards Safe Reinforcement Learning via Human Intervention</a>. William Saunders, Girish Sastry, Andreas Stuhlmueller, Owain Evans (2017)</li>
+                             -->
+                            <li><a href="https://arxiv.org/abs/2212.03363">Few-Shot Preference Learning for Human-in-the-Loop RL</a>. Joey Hejna, Dorsa Sadigh (2022)</li>
+                            <li><a href="https://arxiv.org/abs/1706.03741">Deep Reinforcement Learning from Human Preferences</a>. Paul Christiano, Jan Leike, Tom B. Brown, Miljan Martic, Shane Legg, Dario Amodei (2017)</li>
+                        </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-02_Alex.pdf">[talk #1]</a><br><a href="slides/pre_11-02_Kun.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row holiday-row">
+                        <td class="date-cell"><strong>Week 9</strong><br>Mar 12, 14</td>
+                        <td class="topic-cell">No Class - Spring Break</td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      <!-- <tr class="schedule-row">
+                        <td class="topic-cell"><p>Learning to Learn</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1611.02779">RL^2: Fast Reinforcement Learning via Slow Reinforcement Learning</a>. Yan Duan, John Schulman, Xi Chen, Peter L. Bartlett, Ilya Sutskever, Pieter Abbeel (2016)</li>
+                            <li><a href="http://proceedings.mlr.press/v48/santoro16.pdf">Meta-Learning with Memory-Augmented Neural Networks</a>. Adam Santoro, Sergey Bartunov, Matthew Botvinick, Daan Wierstra, Timothy Lillicrap (2016)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://openreview.net/pdf?id=rJY0-Kcll">Optimization as a Model for Few-Shot Learning</a>. Sachin Ravi, Hugo Larochelle (2017)</li>
+                            <li><a href="https://arxiv.org/abs/2003.01239">Rapidly Adaptable Legged Robots via Evolutionary Meta-Learning</a>. Xingyou Song, Yuxiang Yang, Krzysztof Choromanski, Ken Caluwaerts, Wenbo Gao, Chelsea Finn, Jie Tan (2020)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          <br>
+                        </td>
+                        <td class="notes-cell">
+                          <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a>
+                          <br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a>
+                        </td>
+                      </tr> -->
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 10</strong><br>Tues, Mar 19</td>
+                        <td class="topic-cell"><p>Task and Motion Planning</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2311.03293">Learning Resuable Manipulation Strategies</a>. Jiayuan Mao, Tomás Lozano-Pérez, Joshua B. Tenenbaum, Leslie Pack Kaelbling (2023) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2306.14447">RoboCook: Long-Horizon Elasto-Plastic Object Manipulation with Diverse Tools</a>. Haochen Shi, Huazhe Xu, Samuel Clarke, Yunzhu Li, Jiajun Wu (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1911.04679">Object-Centric Task and Motion Planning in Dynamic Environments</a>. Toki Migimatsu, Jeannette Bohg (2019)</li>
+                            <li><a href="https://ifaamas.org/Proceedings/aamas2018/pdfs/p220.pdf">PETLON: Planning Efficiently for Task-Level-Optimal Navigation</a>. Shih-Yun Lo, Shiqi Zhang, Peter Stone (2018)</li>
+                            <li><a href="http://www.roboticsproceedings.org/rss14/p44.pdf">Differentiable Physics and Stable Modes for Tool-Use and Manipulation Planning</a>. Marc Toussaint, Kelsey Allen, Kevin Smith, Joshua Tenenbaum (2014)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <!-- <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 9</strong><br>Thur, Oct 20</td>
+                        <td class="topic-cell"><p>Attention Architectures</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2210.03094">VIMA: General Robot Manipulation with Multimodal Prompts</a>. Yunfan Jiang, Agrim Gupta, Zichen Zhang, Guanzhi Wang, Yongqiang Dou, Yanjun Chen, Li Fei-Fei, Anima Anandkumar, Yuke Zhu, Linxi Fan (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2209.05451">Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation</a>. Mohit Shridhar, Lucas Manuelli, Dieter Fox (2022)</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2306.14896">RVT: Robotic View Transformer for 3D Object Manipulation</a>. Ankit Goyal, Jie Xu, Yijie Guo, Valts Blukis, Yu-Wei Chao, Dieter Fox (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2107.14795">Perceiver IO: A General Architecture for Structured Inputs & Outputs</a>. Andrew Jaegle, Sebastian Borgeaud, Jean-Baptiste Alayrac, Carl Doersch, Catalin Ionescu, David Ding, Skanda Koppula, Daniel Zoran, Andrew Brock, Evan Shelhamer, Olivier Hénaff, Matthew M. Botvinick, Andrew Zisserman, Oriol Vinyals, Joāo Carreira (2022)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Zifan<br>Steven
+                        </td>
+                        <td class="notes-cell">
+                          <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a>
+                        </td>
+                      </tr> -->
+
+                      <tr class="schedule-row chapter-row">
+                        <td class="date-cell" colspan="5" style="text-align:center;"><strong>Part III: Cutting-edge topics</strong></td>
+                      </tr>
+
+                      <!-- topic: embodied AI env -->
+                      <!-- req: behavior; habitat -->
+                      <!-- optional: AI2THOR; Proc THOR (procedure one) -->
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 10</strong><br>Thur, Mar 21</td>
+                        <td class="topic-cell"><p>Embodied AI Benchmark</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2108.03332">BEHAVIOR: Benchmark for Everyday Household Activities in Virtual, Interactive, and Ecological Environments</a>.  Sanjana Srivastava, Chengshu Li, Michael Lingelbach, Roberto Martín-Martín, Fei Xia, Kent Vainio, Zheng Lian, Cem Gokmen, Shyamal Buch, C. Karen Liu, Silvio Savarese, Hyowon Gweon, Jiajun Wu, Li Fei-Fei (2021) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/1904.01201">Habitat: A Platform for Embodied AI Research</a>. Manolis Savva, Abhishek Kadian, Oleksandr Maksymets, Yili Zhao, Erik Wijmans, Bhavana Jain, Julian Straub, Jia Liu, Vladlen Koltun, Jitendra Malik, Devi Parikh, Dhruv Batra (2019) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://openreview.net/pdf?id=_8DoIe8G3t">BEHAVIOR-1K: A Benchmark for Embodied AI with 1,000 Everyday Activities and Realistic Simulation</a>. Chengshu Li*, Ruohan Zhang*, Josiah Wong*, Cem Gokmen*, Sanjana Srivastava*, Roberto Martín-Martín*, Chen Wang*, Gabrael Levine*, Michael Lingelbach, Jiankai Sun, Mona Anvari, Minjune Hwang, Manasi Sharma, Arman Aydin, Dhruva Bansal, Samuel Hunter, Kyu-Young Kim, Alan Lou, Caleb R Matthews, Ivan Villa-Renteria, Jerry Huayang Tang, Claire Tang, Fei Xia, Silvio Savarese, Hyowon Gweon, Karen Liu, Jiajun Wu, Li Fei-Fei (2022)</li>
+                            <li><a href="https://arxiv.org/abs/1712.05474">AI2-THOR: An Interactive 3D Environment for Visual AI</a>. Eric Kolve, Roozbeh Mottaghi, Winson Han, Eli VanderBilt, Luca Weihs, Alvaro Herrasti, Matt Deitke, Kiana Ehsani, Daniel Gordon, Yuke Zhu, Aniruddha Kembhavi, Abhinav Gupta, Ali Farhadi (2017)</li>
+                            <li><a href="https://arxiv.org/abs/2206.06994">ProcTHOR: Large-Scale Embodied AI Using Procedural Generation</a>. Matt Deitke, Eli VanderBilt, Alvaro Herrasti, Luca Weihs, Jordi Salvador, Kiana Ehsani, Winson Han, Eric Kolve, Ali Farhadi, Aniruddha Kembhavi, Roozbeh Mottaghi (2022)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 11</strong><br>Tues, Mar 26</td>
+                        <td class="topic-cell"><p>Dexterous Manipulation</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2309.00987">Sequential Dexterity: Chaining Dexterous Policies for Long-Horizon Manipulation</a>. Yuanpei Chen, Chen Wang, Li Fei-Fei, C. Karen Liu (2023) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2211.11744">Visual Dexterity: In-hand Dexterous Manipulation from Depth</a>. Tao Chen, Megha Tippur, Siyang Wu, Vikash Kumar, Edward Adelson, Pulkit Agrawal (2022) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2210.13702">DeXtreme: Transfer of Agile In-hand Manipulation from Simulation to Reality</a>. Ankur Handa, Arthur Allshire, Viktor Makoviychuk, Aleksei Petrenko, Ritvik Singh, Jingzhou Liu, Denys Makoviichuk, Karl Van Wyk, Alexander Zhurkevich, Balakumar Sundaralingam, Yashraj Narang, Jean-Francois Lafleche, Dieter Fox, Gavriel State (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2111.03043">A System for General In-Hand Object Re-Orientation</a>. Tao Chen, Jie Xu, Pulkit Agrawal (2021)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 11</strong><br>Thur, Mar 28</td>
+                        <td class="topic-cell"><p>Language in Robotics</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2302.07241">Do As I Can, Not As I Say: Grounding Language in Robotic Affordances</a>. Michael Ahn, Anthony Brohan, Noah Brown, Yevgen Chebotar, Omar Cortes, Byron David, Chelsea Finn, Chuyuan Fu, Keerthana Gopalakrishnan, Karol Hausman, Alex Herzog, Daniel Ho, Jasmine Hsu, Julian Ibarz, Brian Ichter, Alex Irpan, Eric Jang, Rosario Jauregui Ruano, Kyle Jeffrey, Sally Jesmonth, Nikhil J Joshi, Ryan Julian, Dmitry Kalashnikov, Yuheng Kuang, Kuang-Huei Lee, Sergey Levine, Yao Lu, Linda Luu, Carolina Parada, Peter Pastor, Jornell Quiambao, Kanishka Rao, Jarek Rettinghouse, Diego Reyes, Pierre Sermanet, Nicolas Sievers, Clayton Tan, Alexander Toshev, Vincent Vanhoucke, Fei Xia, Ted Xiao, Peng Xu, Sichun Xu, Mengyuan Yan, Andy Zeng (2022) [Presenter: Pending]</li>
+                            <li><a href="https://robotics-transformer2.github.io/assets/rt2.pdf">RT-2: Vision-Language-Action Models Transfer Web Knowledge to Robotic Control</a>. Anthony Brohan, Noah Brown, Justice Carbajal, Yevgen Chebotar, Xi Chen, Krzysztof Choromanski,
+                              Tianli Ding, Danny Driess, Avinava Dubey, Chelsea Finn, Pete Florence, Chuyuan Fu,
+                              Montse Gonzalez Arenas, Keerthana Gopalakrishnan, Kehang Han, Karol Hausman, Alexander Herzog,
+                              Jasmine Hsu, Brian Ichter, Alex Irpan, Nikhil Joshi, Ryan Julian, Dmitry Kalashnikov, Yuheng Kuang,
+                              Isabel Leal, Lisa Lee, Tsang-Wei Edward Lee, Sergey Levine, Yao Lu, Henryk Michalewski, Igor Mordatch,
+                              Karl Pertsch, Kanishka Rao, Krista Reymann, Michael Ryoo, Grecia Salazar, Pannag Sanketi,
+                              Pierre Sermanet, Jaspiar Singh, Anikait Singh, Radu Soricut, Huong Tran, Vincent Vanhoucke, Quan Vuong,
+                              Ayzaan Wahid, Stefan Welker, Paul Wohlhart, Jialin Wu, Fei Xia, Ted Xiao, Peng Xu, Sichun Xu, Tianhe Yu,
+                              and Brianna Zitkovich (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://www.roboticsproceedings.org/rss16/p082.pdf">Concept2Robot: Learning Manipulation Concepts from Instructions and Human Demonstrations</a>. Lin Shao, Toki Migimatsu, Qiang Zhang, Karen Yang, and Jeannette Bohg (2020)</li>
+                            <li><a href="https://arxiv.org/abs/2310.12931">Eureka: Human-Level Reward Design via Coding Large Language Models</a>. Yecheng Jason Ma, William Liang, Guanzhi Wang, De-An Huang, Osbert Bastani, Dinesh Jayaraman, Yuke Zhu, Linxi Fan, Anima Anandkumar (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2305.05658">TidyBot: Personalized Robot Assistance with Large Language Models</a>. Jimmy Wu, Rika Antonova, Adam Kan, Marion Lepert, Andy Zeng, Shuran Song, Jeannette Bohg, Szymon Rusinkiewicz, Thomas Funkhouser (2023)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 12</strong><br>Tues, Apr 2</td>
+                        <!-- <td class="topic-cell"><p>Sim-to-Real Gap</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/1804.09364">Driving Policy Transfer via Modularity and Abstraction</a>. Matthias Müller, Alexey Dosovitskiy, Bernard Ghanem, Vladlen Koltun (2018) [Presenter: Pending]</li>
+                            <li><a href="https://www.science.org/doi/10.1126/scirobotics.aau5872">Learning Agile and Dynamic Motor Skills for Legged Robots</a>. Jemin Hwangbo, Joonho Lee, Alexey Dosovitskiy, Dario Bellicoso, Vassilios Tsounis, Vladlen Koltun, Marco Hutter (2019) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2107.04034">RMA: Rapid Motor Adaptation for Legged Robots</a>. Ashish Kumar, Zipeng Fu, Deepak Pathak, Jitendra Malik (2021)</li>
+                            <li><a href="https://arxiv.org/abs/2305.17110">IndustReal: Transferring Contact-Rich Assembly Tasks from Simulation to Reality</a>. Bingjie Tang, Michael A. Lin, Iretiayo Akinola, Ankur Handa, Gaurav S. Sukhatme, Fabio Ramos, Dieter Fox, Yashraj Narang (2023)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td> -->
+                        <td class="topic-cell"><p>Multi-task Learning for Robotics</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2209.05451">Perceiver-Actor: A Multi-Task Transformer for Robotic Manipulation</a>. Mohit Shridhar, Lucas Manuelli, Dieter Fox (2022) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2309.01918">RoboAgent: Generalization and Efficiency in Robot Manipulation via Semantic Augmentations and Action Chunking</a>. Homanga Bharadhwaj, Jay Vakil, Mohit Sharma, Abhinav Gupta, Shubham Tulsiani, Vikash Kumar (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2302.04659">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a>. Jiayuan Gu, Fanbo Xiang, Xuanlin Li, Zhan Ling, Xiqiang Liu, Tongzhou Mu, Yihe Tang, Stone Tao, Xinyue Wei, Yunchao Yao, Xiaodi Yuan, Pengwei Xie, Zhiao Huang, Rui Chen, Hao Su (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2210.03094">VIMA: General Robot Manipulation with Multimodal Prompts</a>. Yunfan Jiang, Agrim Gupta, Zichen Zhang, Guanzhi Wang, Yongqiang Dou, Yanjun Chen, Li Fei-Fei, Anima Anandkumar, Yuke Zhu, Linxi Fan (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2307.02484">Elastic Decision Transformer</a>. Yueh-Hua Wu, Xiaolong Wang, Masashi Hamaya (2023)</li>
+                            <li><a href="https://arxiv.org/abs/1910.10897">Meta-World: A Benchmark and Evaluation for Multi-Task and Meta Reinforcement Learning</a>. Tianhe Yu, Deirdre Quillen, Zhanpeng He, Ryan Julian, Avnish Narayan, Hayden Shively, Adithya Bellathur, Karol Hausman, Chelsea Finn, Sergey Levine (2019)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row holiday-row">
+                        <td class="date-cell"><strong>Week 12</strong><br>Thur, Apr 4</td>
+                        <td class="topic-cell"><p>No Class - Attending Conference</p>
+                          <ul></ul>
+                        </td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 13</strong><br>Tues, Apr 9</td>
+                        <td class="topic-cell"><p>Program Synthesis for Embodied Agents</p>
+                          <ul>
+                            <li><a href="https://arxiv.org/abs/2209.07753">Code as Policies: Language Model Programs for Embodied Control</a>. Jacky Liang, Wenlong Huang, Fei Xia, Peng Xu, Karol Hausman, Brian Ichter, Pete Florence, Andy Zeng (2022) [Presenter: Pending]</li>
+                            <li><a href="https://arxiv.org/abs/2307.05973">VoxPoser: Composable 3D Value Maps for Robotic Manipulation with Language Models</a>. Wenlong Huang, Chen Wang, Ruohan Zhang, Yunzhu Li, Jiajun Wu, Li Fei-Fei (2023) [Presenter: Pending]</li>
+                          </ul>
+                          <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/2305.16291">Voyager: An Open-Ended Embodied Agent with Large Language Models</a>. Guanzhi Wang, Yuqi Xie, Yunfan Jiang, Ajay Mandlekar, Chaowei Xiao, Yuke Zhu, Linxi Fan, Anima Anandkumar (2023)</li>
+                            <li><a href="https://arxiv.org/abs/2209.11302">ProgPrompt: Generating Situated Robot Task Plans using Large Language Models</a>. Ishika Singh, Valts Blukis, Arsalan Mousavian, Ankit Goyal, Danfei Xu, Jonathan Tremblay, Dieter Fox, Jesse Thomason, Animesh Garg (2022)</li>
+                            <li><a href="https://arxiv.org/abs/2006.08381">DreamCoder: Growing generalizable, interpretable knowledge with wake-sleep Bayesian program learning</a>. Kevin Ellis, Catherine Wong, Maxwell Nye, Mathias Sable-Meyer, Luc Cary, Lucas Morales, Luke Hewitt, Armando Solar-Lezama, Joshua B. Tenenbaum (2020)</li>
+                          </ul>
+                        </td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                          Pending
+                        </td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/pre_11-09_Zifan.pdf">[talk #1]</a><br><a href="slides/pre_11-09_Steven.pdf">[talk #2]</a> -->
+                        </td>
+                      </tr>
+
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 13</strong><br>Thur, Apr 11</td>
+                        <td class="topic-cell"><p>Guest Lecture I</a></p>
+                          <ul></ul>
+                        </td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 14</strong><br>Tues, Apr 16</td>
+                        <td class="topic-cell"><p>Guest Lecture II</a></p>
+                          <!-- <ul class=optional-reading>
+                            <li><a href="https://arxiv.org/abs/1907.03146">A Review of Robot Learning for Manipulation: Challenges, Representations, and Algorithms</a>. Oliver Kroemer, Scott Niekum, George Konidaris (2019)</li>
+                          </ul> -->
+                        </td>
+                        <td class="presenters-cell"></td>
+                        <td class="notes-cell">
+                          <!-- <a href="slides/lecture_open_problems.pdf">[slides]</a> -->
+                        </td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 14</strong><br>Thur, Apr 18</td>
+                        <td class="topic-cell"><span class="label label-spotlight text-base">Spotlight</span> Final Project Spotlights I</td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                        </td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 15</strong><br>Tues, Apr 23</td>
+                        <td class="topic-cell"><span class="label label-spotlight text-base">Spotlight</span> Final Project Spotlights II</td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                        </td>
+                        <td class="notes-cell"></td>
+                      </tr>
+
+                      <tr class="schedule-row">
+                        <td class="date-cell"><strong>Week 15</strong><br>Thur, Apr 25</td>
+                        <td class="topic-cell"><span class="label label-spotlight text-base">Spotlight</span> Final Project Spotlights III</td>
+                        <td class="presenters-cell">
+                          Pending<br>
+                        </td>
+                        <td class="notes-cell"></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="navbar navbar-expand-md navbar-dark" style="color: white;">
+      <div class="container">
+        &copy; 2024 UIUC CS598YL
+      </div>
+    </footer>
+
+  </body>
+</html>

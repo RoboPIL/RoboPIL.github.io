@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159856695-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-159856695-1');
+        </script>
+        <meta charset="utf-8">
+        <meta name="keywords" content="utaustin,course,artificial intelligence,robotics,robot learning">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <title>CS598YL: Special Topics in Robot Learning</title>
+        <link rel="icon" href="resources/favicon.ico"/>
+        <link rel="shortcut icon" href="resources/favicon.ico"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <div class="container">
+          <a class="navbar-brand" href="index.html">CS598YL - Spring 2024</a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+    
+          <div class="collapse navbar-collapse" id="navbarToggle">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="logistics.html">Logistics</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="syllabus.html">Syllabus</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="project.html">Course Project</a>
+                </li>
+              </ul>
+          </div>
+          </div>
+        </nav>
+        <div class="content">
+            <div class="bg-no-highlight">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-11">
+                            <h2>Course Project</h2>
+                        </div>
+                    </div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>The primary objective of the course project is to give you hands-on experiences in robot learning. For the project, you are expected to have a robot, at least in the simulator. If you can access to a real robot, using a real robot is encouraged. You may work individually or pair up with one teammate on the project, and grades will be calibrated by team size.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-highlight" style="padding-bottom: 30px;">
+                <div class="container">
+                    <div class="section"></div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Suggested Topics</h4>
+                                <p>Here is a list of suggested project topics. You are welcome to discuss with instructor and TA if you have other interesting topics you want to work on.</p>
+                                <ul>
+                                    <li>Perception</li>
+                                    <ul>
+                                        <li>Representation learning for planning and control; 3D/2D;</li>
+                                        <li>Incorporating large foundation model (e.g. <a href="https://github.com/facebookresearch/dinov2">DINO</a>, <a href="https://github.com/facebookresearch/segment-anything">SAM</a>, Vision-Language Model)</li>
+                                    </ul>
+                                    <li>Dynamics</li>
+                                    <ul>
+                                        <li>Model learning; Rigid / deformable / articulated / granular;</li>
+                                        <li>Comparison with physics-based simulators</li>
+                                    </ul>
+                                    <li>Planning & Control</li>
+                                    <ul>
+                                        <li>Model-free RL; Model-based RL;</li>
+                                        <li>Model-predictive control (MPC)</li>
+                                        <li>Task and motion planning (TAMP)</li>
+                                        <li>LLM-guided planning</li>
+                                    </ul>
+                                    <li>System Integration & Application</li>
+                                    <ul>
+                                        <li>Mobile / table-top manipulation</li>
+                                        <li>Dexterous manipulation; Bi-manual manipulation</li>
+                                        <li>Home robots</li>
+                                        <li>Agriculture robots</li>
+                                        <li>Medical robots</li>
+                                        <li>Warehouse robots</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-no-highlight" style="padding-bottom: 30px;">
+                <div class="container">
+                    <div class="section"></div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Grading Policy</h4>
+                                The course project is worth 50% of the total grade. The following shows the breakdown:
+                                <ul>
+                                    <li>Project Proposal (10%). Due Wed Feb 3 11:59 PM.</li>
+                                    <li>Milestone (10%). Due Wed Mar 20 11:59 PM.</li>
+                                    <li>Project Report (15%). Due Fri Apr 26 11:59 PM.</li>
+                                    <li>Project Presentation (15%). Week 14 and Week 15.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-highlight">
+                <div class="container">
+                    <div class="section"></div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Project Proposal (10%)</h4>
+                                <p>
+                                    Your project proposal report should be max 2 pages using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
+                                    in LaTeX. The following is a suggested structure for your report:
+                                <ul>
+                                    <li>Title, Author(s)</li>
+                                    <li>
+                                        <strong>Problem Overview (2%):</strong>
+                                        What is the problem that you will be investigating? Why is it interesting?
+                                    </li>
+                                    <li>
+                                        <strong>Literature Review (2%):</strong>
+                                        What reading will you examine to provide context and background?
+                                    </li>
+                                    <li>
+                                        <strong>Proposed Method and Experiments (2%):</strong>
+                                        What method or algorithm are you proposing? You don't have to have an exact answer at this point, but you should have a general sense of how you will approach the problem you are working on. How will you evaluate your results, both quantitatively and qualitatively?
+                                    </li>
+                                    <li>
+                                        <strong>Milestone and Timeline (2%):</strong>
+                                        What are intermediate milestones you plan to accomplish? What is the final goal you plan to reach? What is the timeline for the project?
+                                    </li>
+                                    <li>
+                                        <strong>Team Background (2%):</strong>
+                                        What is your team's background? How is it related to your project?
+                                    </li>
+                                </ul>
+                                <p>
+                                    <strong>Submission:</strong> <a href="https://canvas.illinois.edu/">Canvas</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-no-highlight">
+                <div class="container">
+                    <div class="section"></div>
+                    <div class="section">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4>Milestone (10%)</h4>
+                                <p>
+                                    Your project milestone report should be max 3 pages using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a>
+                                    in LaTeX. The following is a suggested structure for your report:
+                                </p>
+                                <ul>
+                                    <li>
+                                        <strong>Title, Author(s)</strong>
+                                    </li>
+                                    <li>
+                                        <strong>Introduction (2%):</strong>
+                                        Introduce your problem and the overall plan for approaching your problem
+                                    </li>
+                                    <li>
+                                        <strong>Problem Statement (2%):</strong>
+                                        Describe your problem precisely specifying the dataset to be used, expected results and evaluation
+                                    </li>
+                                    <li>
+                                        <strong>Literature Review (2%):</strong>
+                                        Describe important related work and their relevance to your project
+                                    </li>
+                                    <li>
+                                        <strong>Technical Approach (2%):</strong>
+                                        Describe the methods you intend to apply to solve the given problem
+                                    </li>
+                                    <li>
+                                        <strong>Intermediate/Preliminary Results (2%):</strong>
+                                        State and evaluate your results up to the milestone
+                                    </li>
+                                </ul>
+                                <p>
+                                    <strong>Submission:</strong> <a href="https://canvas.illinois.edu/">Canvas</a>
+                                <p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div class="bg-highlight">
+    <div class="container">
+        <div class="section"></div>
+        <div class="section">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Project Report (15%)</h4>
+                    <p>
+                        Your final write-up is required to be between 6-8 pages (8 pages max) using the <a href="https://roboticsconference.org/docs/paper-template-latex.tar.gz">RSS template</a> in LaTeX. The following is a suggested structure for your report:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Title, Author(s)</strong>
+                        </li>
+                        <li>
+                            <strong>Abstract (1.5%):</strong>
+                            Briefly describe your problem, approach, and key results. Should be no more than 300 words.
+                        </li>
+                        <li>
+                            <strong>Introduction (1.5%):</strong>
+                            Describe the problem you are working on, why it's important, and an overview of your results
+                        </li>
+                        <li>
+                            <strong>Related Work (1.5%):</strong>
+                            Discuss published work that relates to your project. How is your approach similar or different from others?
+                        </li>
+                        <li>
+                            <strong>Methods (4.5%):</strong>
+                            Discuss your approach for solving the problems that you set up in the introduction. Why is your approach the right thing to do? Did you consider alternative approaches? You should demonstrate that you have applied ideas and skills built up during the quarter to tackling your problem of choice. It may be helpful to include figures, diagrams, or tables to describe your method or compare it with other methods.
+                        </li>
+                        <li>
+                            <strong>Experiments (4.5%):</strong>
+                            Discuss the experiments that you performed to demonstrate that your approach solves the problem. The exact experiments will vary depending on the project, but you might compare with previously published methods, perform an ablation study to determine the impact of various components of your system, experiment with different hyperparameters or architectural choices, use visualization techniques to gain insight into how your model works, discuss common failure modes of your model, etc. You should include graphs, tables, or other figures to illustrate your experimental results.
+                        </li>
+                        <li>
+                            <strong>Conclusion (0.75%):</strong>
+                            Summarize your key results - what have you learned? Suggest ideas for future extensions or new applications of your ideas.
+                        </li>
+                        <li>
+                            <strong>Writing / Formatting (0.75%):</strong>
+                            Is your paper clearly written and nicely formatted?
+                        </li>
+                        <li>
+                            <strong>Supplementary Material</strong>
+                            , not counted toward your 6-8 page limit and submitted as a separate file. Your supplementary material might include:
+                    
+                            <ul>
+                                <li>Source code (if your project proposed an algorithm, or code that is relevant and important for your project).</li>
+                                <li>Cool videos, interactive visualizations, demos, etc.</li>
+                            </ul>
+                            Examples of things to not put in your supplementary material:
+                    
+                            <ul>
+                                <li>The entire PyTorch/TensorFlow Github source code.</li>
+                                <li>Any code that is larger than 10 MB.</li>
+                                <li>Model checkpoints.</li>
+                                <li>A computer virus.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>
+                        <strong>Submission:</strong> <a href="https://canvas.illinois.edu/">Canvas</a>
+                    <p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bg-no-highlight">
+    <div class="container">
+        <div class="section"></div>
+        <div class="section">
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Project Presentation (15%)</h4>
+                    <p>
+                        You will have an opportunity to present your awesome work to the instructor and other students in the last three classes. Here are information about project presentation.
+                        <ul>
+                            <li>
+                                <strong>Time:</strong>
+                                10 minutes for presentation and 2 minutes for Q&A.
+                            </li>
+                            <li>
+                                <strong>Contents:</strong> similar to project report.
+                            </li>
+                            <li>
+                                <strong>Grading scheme:</strong>
+                                <ul>
+                                    <li>Review prior works and describe why the problem is interesting (3%)</li>
+                                    <li>Describe methods correctly and clearly (3%)</li>
+                                    <li>Present experimental results and analyze results (3%)</li>
+                                    <li>Discuss future research directions (3%)</li>
+                                    <li>Respond to questions and engage in open-ended discussion (3%)</li>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<footer class="navbar navbar-expand-md navbar-dark" style="color: white;">
+    <div class="container">
+        &copy; 2024 UIUC CS598YL
+    </div>
+</footer>
+</body></html>
