@@ -26,20 +26,19 @@
 
       console.log("interactive", task)
 
-      var img = document.getElementById("interactive-img");
-      img.src = "media/interactive/" + 
-                  task + 
-                  "_crop.png"
+      var video = document.getElementById("interactive-video");
+      video.src = "media/interactive/" + task + ".mp4"
+      video.play();
 
       var html_1 = document.getElementById("interactive-html-1");
       html_1.src = "media/interactive/" + 
                   task + 
-                  "_mask.html"
+                  "_raw_obs.html"
 
       var html_2 = document.getElementById("interactive-html-2");
       html_2.src = "media/interactive/" + 
                   task + 
-                  "_feature.html"
+                  "_action.html"
     }
     
     function updateTracking() {
@@ -392,9 +391,8 @@
           Visualize GILD for
           <div class="select is-small is-rounded">     
             <select id="interative-menu" onchange="updateInteractive()">
-            <option value="shoe" selected="selected">shoes</option>
-            <option value="mug">mugs</option>
-            <option value="fork">forks</option>
+            <option value="knife_1" selected="selected">knife_1</option>
+            <option value="knife_2">knife_2</option>
             </select>
           </div>
         </div>
@@ -402,22 +400,23 @@
       </div>
 
       <div class="columns">
-        <div class="column has-text-centered">
+        <div class="column is-half has-text-centered">
           <p style="text-align:center;">
-            <!-- <img id="interactive-img", src="media/interactive/shoe_crop.png" class="interpolation-image" /> -->
-            <iframe id="interactive-img" src="media/interactive/shoe_crop.png" width=320 height=320 frameborder="0"></iframe>
+            <video id="interactive-video" width="100%" height="100%" controls autoplay loop muted>
+              <source src="media/interactive/knife_1.mp4" type="video/mp4">
+            </video>
           </p>
         </div>
         <div class="column has-text-centered">
-          <iframe id="interactive-html-1" src="media/interactive/shoe_mask.html" width=400 height=300 frameborder="0"></iframe>
+          <iframe id="interactive-html-1" src="media/interactive/knife_1_raw_obs.html" width="100%" height=300 frameborder="0"></iframe>
           <p style="text-align:center;">
-            Mask Field
+            Raw Observation
           </p>
         </div>
         <div class="column has-text-centered" id="second-iframe-container">
-          <iframe id="interactive-html-2" src="media/interactive/shoe_feature.html" width=400 height=300 frameborder="0"></iframe>
+          <iframe id="interactive-html-2" src="media/interactive/knife_1_action.html" width="100%" height=300 frameborder="0"></iframe>
           <p style="text-align:center;">
-            Descriptor Field
+            3D Semantic Field with Actions
           </p>
         </div>
       </div>
