@@ -81,6 +81,181 @@
 </head>
 <body onload="updateInteractive();">
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-fullhd">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a target="_blank" href="https://wangyixuan12.github.io/">Kaifeng Zhang</a>*,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://zhuoranli23.github.io/">Baoyu Li</a>*,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://robo-alex.github.io/">Kris Hauser</a>,
+            </span>
+            <span class="author-block">
+              <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a>
+            </span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Illinois Urbana-Champaign</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">* Equal contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="is-size-4 publication-authors">
+              <span class="author-block"><b>RSS 2024</b></span>
+            </div>
+
+            <div class="is-size-4 publication-authors">
+              <span class="author-block"><b><font color='#b70000'>Workshop Best Paper</font>, ICRA 2024 RMDO Workshop</b></span>
+            </div>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="./assets/AdaptiGraph_RSS24.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+            <!-- Arxiv Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://arxiv.org/abs/2309.16118"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fas fa-file"></i>
+                </span>
+                <span>ArXiv</span>
+              </a>
+            </span>
+
+            <!-- Video Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://www.youtube.com/watch?v=lL0J_aLPKFM"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                </span>
+                <span>Video</span>
+              </a>
+            </span>
+
+            <!-- Code Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://kywind.github.io/adaptigraph"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span>Code</span>
+                </a>
+            </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered  is-centered">
+          <img src='assets/adaptigraph-method.jpg'>
+          <!-- <video id="teaser" autoplay muted loop height="60%" width="60%">
+            <source src="media/videos/teaser.mp4"
+                    type="video/mp4">
+          </video> -->
+          </br>
+        </div>
+        <br>
+        <h2 class="subtitle has-text-centered">
+        <b>AdaptiGraph</b> is a unified graph-based neural dynamics framework for real-time modeling and control of various materials with unknown physical properties.
+        </h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+          <p>
+            This paper introduces AdaptiGraph, a learning-based dynamics modeling approach 
+            that enables robots to predict, adapt to, and control a wide array of challenging 
+            deformable materials with unknown physical properties. AdaptiGraph leverages the 
+            highly flexible graph-based neural dynamics (GBND) framework, which represents 
+            material bits as particles and employs a graph neural network (GNN) to predict 
+            particle motion. Its key innovation is a unified physical property-conditioned 
+            GBND model capable of predicting the motions of diverse materials with varying 
+            physical properties without retraining. Upon encountering new materials during 
+            online deployment, AdaptiGraph utilizes a physical property optimization process 
+            for a few-shot adaptation of the model, enhancing its fit to the observed 
+            interaction data. The adapted models can precisely simulate the dynamics and predict 
+            the motion of various deformable materials, such as ropes, granular media, rigid 
+            boxes, and cloth, while adapting to different physical properties, including 
+            stiffness, granular size, and center of pressure. On prediction and manipulation 
+            tasks involving a diverse set of real-world deformable objects, our method exhibits 
+            superior prediction accuracy and task proficiency over non-material-conditioned and 
+            non-adaptive models.
+           </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3">Video</h2>
+        <h2 class="title is-3">Material-Adaptive Dynamics</h2>
+        <h2 class="title is-3">Online Adaptation</h2>
+        <h2 class="title is-3">Planning</h2>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-widescreen content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{zhang2024adaptigraph,
+      title={AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation},
+      author={Zhang, Kaifeng and Li, Baoyu and Hauser, Kris and Li, Yunzhu},
+      year={2024}
+    }</code></pre>
+  </div>
+</section>
 
 
 <footer class="footer">
