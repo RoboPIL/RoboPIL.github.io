@@ -1,0 +1,28 @@
+#interactive-buttons {
+  height: 50px;
+  border: none;
+  overflow: hidden;
+}
+
+#interactive-buttons::-moz-focus-inner {
+  border: 0;
+}
+
+#interactive-buttons:focus {
+  outline: none;
+}
+
+#interactive-buttons option {
+  width: 100px;
+  font-size: 1.2em;
+  font-weight: bold;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 10px 0;
+  text-align: center;
+  margin-right: 20px;
+  display: inline-block;
+  cursor: pointer;
+  border:rgb(54, 54, 54) solid 2px;
+  border-radius: 25px;
+  color: rgb(54, 54, 54);
+}

@@ -8,58 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdaptiGraph</title>
 
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-FV4ZJ9PVSV"></script>  
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FV4ZJ9PVSV');
-  </script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
+
   <script>
-
     function updateInteractive() {
-      var task = document.getElementById("interative-menu").value;
-
-      console.log("interactive", task)
-
-      var img = document.getElementById("interactive-img");
-      img.src = "media/interactive/" + 
-                  task + 
-                  "_crop.png"
-
-      var html_1 = document.getElementById("interactive-html-1");
-      html_1.src = "media/interactive/" + 
-                  task + 
-                  "_mask.html"
-
-      var html_2 = document.getElementById("interactive-html-2");
-      html_2.src = "media/interactive/" + 
-                  task + 
-                  "_feature.html"
+      var task = document.getElementById("interactive-buttons").value;
+      console.log("interactive", task);
+      var fig = document.getElementById("interactive-figure-0");
+      fig.src = "media/figures/" + task + "-0.jpg";
+      var fig = document.getElementById("interactive-figure-1");
+      fig.src = "media/figures/" + task + "-1.jpg";
+      var html = document.getElementById("interactive-html");
+      html.src = "media/interactive/" + task + ".html";
     }
-    
-    function updateTracking() {
-      var task = document.getElementById("tracking-menu").value;
-
-      console.log("interactive", task)
-
-      var vid = document.getElementById("tracking-vid");
-      vid.src = "media/interactive/" + 
-                  task + 
-                  ".mp4"
-
-      var html_1 = document.getElementById("tracking-html");
-      html_1.src = "media/interactive/" + 
-                  task + 
-                  ".html"
-    }
-
-
-
   </script>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
@@ -72,6 +35,7 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/misc.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -79,7 +43,6 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
-<body onload="updateInteractive();">
 
 <section class="hero">
   <div class="hero-body">
@@ -90,13 +53,13 @@
           
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a target="_blank" href="https://wangyixuan12.github.io/">Kaifeng Zhang</a>*,
+              <a target="_blank" href="https://kywind.github.io">Kaifeng Zhang</a>*,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://zhuoranli23.github.io/">Baoyu Li</a>*,
+              <a target="_blank" href="https://www.linkedin.com/in/baoyu-li-b1646b220/">Baoyu Li</a>*,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://robo-alex.github.io/">Kris Hauser</a>,
+              <a target="_blank" href="https://kkhauser.web.illinois.edu/">Kris Hauser</a>,
             </span>
             <span class="author-block">
               <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a>
@@ -116,7 +79,7 @@
               <span class="author-block"><b>RSS 2024</b></span>
             </div>
 
-            <div class="is-size-4 publication-authors">
+            <div class="is-size-5 publication-authors">
               <span class="author-block"><b><font color='#b70000'>Workshop Best Paper</font>, ICRA 2024 RMDO Workshop</b></span>
             </div>
           </div>
@@ -125,7 +88,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="./assets/AdaptiGraph_RSS24.pdf"
+                <a target="_blank" href="./AdaptiGraph_RSS24.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -136,23 +99,12 @@
 
             <!-- Arxiv Link. -->
             <span class="link-block">
-              <a target="_blank" href="https://arxiv.org/abs/2309.16118"
+              <a target="_blank" href="https://kywind.github.io/adaptigraph"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fas fa-file"></i>
                 </span>
                 <span>ArXiv</span>
-              </a>
-            </span>
-
-            <!-- Video Link. -->
-            <span class="link-block">
-              <a target="_blank" href="https://www.youtube.com/watch?v=lL0J_aLPKFM"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                    <i class="fab fa-youtube"></i>
-                </span>
-                <span>Video</span>
               </a>
             </span>
 
@@ -181,11 +133,7 @@
     <div class="hero-body">
       <div class="container">
         <div class="columns is-vcentered  is-centered">
-          <img src='assets/adaptigraph-method.jpg'>
-          <!-- <video id="teaser" autoplay muted loop height="60%" width="60%">
-            <source src="media/videos/teaser.mp4"
-                    type="video/mp4">
-          </video> -->
+          <img src='media/figures/adaptigraph-method.jpg'>
           </br>
         </div>
         <br>
@@ -201,12 +149,12 @@
 <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
+
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
-          <p>
+            <p>
             This paper introduces AdaptiGraph, a learning-based dynamics modeling approach 
             that enables robots to predict, adapt to, and control a wide array of challenging 
             deformable materials with unknown physical properties. AdaptiGraph leverages the 
@@ -224,22 +172,281 @@
             tasks involving a diverse set of real-world deformable objects, our method exhibits 
             superior prediction accuracy and task proficiency over non-material-conditioned and 
             non-adaptive models.
-           </p>
+            </p>
           </div>
-        </div>
+          <br>
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/DQHxb4saxQo" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          <!-- <video id="teaser" autoplay muted loop height="100%" width="100%">
+            <source src="media/videos/main.mp4"
+                    type="video/mp4">
+          </video> -->
+   		  </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="hero is-small">
+<section class="hero">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
       <div class="container is-max-widescreen">
-        <h2 class="title is-3">Video</h2>
+
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>In “AdaptiGraph”, we learn a graph-based neural dynamics model that adapts to objects with varying dynamics. 
+            We employ physical property conditioning, and perform inverse optimization to estimate the physical properties of unseen objects through interaction.
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <!-- <video id="teaser" autoplay muted loop height="100%" width="100%">
+            <source src="media/videos/method.mp4"
+                    type="video/mp4">
+          </video> -->
+          <div class="column is-fullwidth">
+            <img src="media/figures/method.jpg" alt="">
+          </div>
+          </div>
+        </div>
+
         <h2 class="title is-3">Material-Adaptive Dynamics</h2>
-        <h2 class="title is-3">Online Adaptation</h2>
+        <div class="content has-text-justified">
+          <p> Our method can capture the dynamics of various object types such as rigid boxes, ropes, granular objects, and cloths. 
+            The red dashed boxes highlight the improved dynamics prediction accuracy of our method compared to the no adaptation baseline. 
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-1-left.jpg" alt="">
+            <p style="text-align:center">
+              The baseline assumes that the center of pressure is at the geometric center of the box, 
+              and predicts the wrong rotation direction.
+            </p>
+          </div>
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-1-right.jpg" alt="">
+            <p style="text-align:center">
+              Our method identifies that the yarn has low stiffness, and predicts more bending effects.
+            </p>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-2-left.jpg" alt="">
+            <p style="text-align:center">
+              The baseline assumes that the center of pressure is at the geometric center of the box, 
+              and predicts the wrong rotation direction.
+            </p>
+          </div>
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-2-right.jpg" alt="">
+            <p style="text-align:center">
+              Our method identifies that the polymer rope has high stiffness, and predictes less bending effects.
+            </p>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-3-left.jpg" alt="">
+            <p style="text-align:center">
+              Our method identifies that the coffee beans have small granularity, and predicts more stacking effects.
+            </p>
+          </div>
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-3-right.jpg" alt="">
+            <p style="text-align:center">
+              The baseline predicts insufficient stretching and shearing effects for the low-stiffness modal fabric cloth.
+            </p>
+          </div>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-4-left.jpg" alt="">
+            <p style="text-align:center">
+              Our method identifies that the chocolates have large granularity, and predicts less stacking effects.
+            </p>
+          </div>
+          <div class="column is-fullwidth">
+            <img src="media/figures/dynamics-1-4-right.jpg" alt="">
+            <p style="text-align:center">
+              The baseline predicts too much stretching effects for the high-stiffness cotton cloth.
+            </p>
+          </div>
+        </div>
+
+        <h2 class="title is-3">Interactive Visualization</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column has-text-centered">
+            <select id="interactive-buttons" multiple onchange="updateInteractive()">
+              <option value="interactive-vis-box" selected="selected">Box</option>
+              <option value="interactive-vis-rope">Rope</option>
+              <option value="interactive-vis-granular">Granular</option>
+              <option value="interactive-vis-cloth">Cloth</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-one-third has-text-centered">
+            <img id="interactive-figure-0" src="media/figures/interactive-vis-box-0.jpg" alt="">
+            <p style="text-align:center;">
+              Before push
+            </p>
+          </div>
+          <div class="column is-one-third has-text-centered">
+            <img id="interactive-figure-1" src="media/figures/interactive-vis-box-1.jpg" alt="">
+            <p style="text-align:center;">
+              After push
+            </p>
+          </div>
+          <div class="column has-text-centered">
+            <img src="media/figures/interactive-vis-legend.jpg" alt="">
+            <iframe id="interactive-html" src="media/interactive/interactive-vis-box.html" width="100%" height="345" frameborder="0"></iframe>
+            <p style="text-align:center;">
+              Dynamics prediction
+            </p>
+          </div>
+        </div>
+        
+        <!-- <div class="column has-text-centered">
+          <iframe src="media/interactive/test-3d.html" width=1000pt height=400pt frameborder="0"></iframe>
+        </div> -->
+
+        <h2 class="title is-3">Adaptation Results</h2>
+        <div class="content has-text-justified">
+          <p> For unseen instances at test time, we perform online inverse optimization to refine their physical property variables based on the physical behaviors observed during interactions.
+            Our estimation rankings align with human impressions of these objects.
+          </p>
+        </div>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-fullwidth">
+            <img src="media/figures/estimation.jpg" alt="">
+          </div>
+        </div>
+
         <h2 class="title is-3">Planning</h2>
+        <div class="content has-text-justified">
+          <p> Finally, our method enhances model-based planning for manipulation of different materials. 
+            The estimated physical property variable allows us to find more efficient actions, resulting in less steps to successfully achieve the target configuration and with lower final errors.
+          </p>
+        </div>
+        
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Box pushing - w/o Adaptation</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-box-1-baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Box pushing - Ours</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-box-1-ours.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+              <h2 class="title is-5">Rope straightening - w/o Adaptation</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-rope-1-baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+              <h2 class="title is-5">Rope straightening - Ours</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-rope-1-ours.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Granular gathering - w/o Adaptation</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-granular-1-baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Granular gathering - Ours</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-granular-1-ours.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cloth relocating - w/o Adaptation</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-cloth-1-baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cloth relocating - Ours</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/planning-cloth-1-ours.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <br>
+        <h2 class="title is-3">Example Simulation Data</h2>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Granular - Low granularity</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_granular_size_0.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Granular - High granularity</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_granular_size_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Rope - Low stiffness</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_rope_stiff_0.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Rope - High stiffness</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_rope_stiff_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cloth - Low stiffness</h2>
+            <video id="dist1" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_cloth_stiff_0.mp4" type="video/mp4">
+            </video>
+          </div>
+
+          <div class="column has-text-centered">
+            <h2 class="title is-5">Cloth - High stiffness</h2>
+            <video id="dist2" controls muted autoplay loop width="99%">
+              <source src="media/videos/sim_cloth_stiff_1.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -248,7 +455,9 @@
 
 <section class="section" id="BibTeX">
   <div class="container is-max-widescreen content">
-    <h2 class="title">BibTeX</h2>
+    <div class="column has-text-centered">
+      <h2 class="title is-3">BibTeX</h2>
+    </div>
     <pre><code>@misc{zhang2024adaptigraph,
       title={AdaptiGraph: Material-Adaptive Graph-Based Neural Dynamics for Robotic Manipulation},
       author={Zhang, Kaifeng and Li, Baoyu and Hauser, Kris and Li, Yunzhu},
@@ -264,7 +473,8 @@
       <div class="column">
         <div class="content has-text-centered">
           <p>
-            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a>. 
+            Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> and 
+            <a href="https://voxposer.github.io/">VoxPoser</a>.
           </p>
         </div>
       </div>
