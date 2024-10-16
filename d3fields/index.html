@@ -99,19 +99,19 @@
               <a target="_blank" href="https://robo-alex.github.io/">Mingtong Zhang</a><sup>2*</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://zhuoranli23.github.io/">Zhuoran Li</a><sup>3, 4*</sup>,
+              <a target="_blank" href="https://zhuoranli23.github.io/">Zhuoran Li</a><sup>3*</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://kelestemur.com/">Tarik Kelestemur</a><sup>5</sup>,
+              <a target="_blank" href="https://kelestemur.com/">Tarik Kelestemur</a><sup>4</sup>,
             </span>
             <span class="author-block">
               <a target="_blank" href="https://ece.illinois.edu/about/directory/faculty/krdc">Katherine Driggs-Campbell</a><sup>2</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://jiajunwu.com/">Jiajun Wu</a><sup>3</sup>,
+              <a target="_blank" href="https://jiajunwu.com/">Jiajun Wu</a><sup>5</sup>,
             </span>
             <span class="author-block">
-              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>3</sup>,
+              <a target="_blank" href="https://profiles.stanford.edu/fei-fei-li">Li Fei-Fei</a><sup>5</sup>,
             </span>
             <span class="author-block">
               <a target="_blank" href="https://yunzhuli.github.io/">Yunzhu Li</a><sup>1</sup>
@@ -121,9 +121,9 @@
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Columbia University,</span>
             <span class="author-block"><sup>2</sup>University of Illinois Urbana-Champaign,</span>
-            <span class="author-block"><sup>3</sup>Stanford University,</span>
-            <span class="author-block"><sup>4</sup>National University of Singapore,</span>
-            <span class="author-block"><sup>5</sup>The AI Institute</span>
+            <span class="author-block"><sup>3</sup>National University of Singapore,</span>
+            <span class="author-block"><sup>4</sup>Boston Dynamics AI Institute,</span>
+            <span class="author-block"><sup>5</sup>Stanford University</span>
             <br>
             <small>(* indicate equal contribution)</small>
           </div>
@@ -132,12 +132,23 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a target="_blank" href="https://openreview.net/forum?id=Uaaj4MaVIQ"
+                <a target="_blank" href="d3fields.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
                   </span>
                   <span>Paper</span>
+                </a>
+              </span>
+
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a target="_blank" href="d3fields_supp.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Supp</span>
                 </a>
               </span>
 
@@ -154,7 +165,7 @@
 
             <!-- Video Link. -->
             <span class="link-block">
-              <a target="_blank" href="https://youtu.be/yNkIOwAO3GA"
+              <a target="_blank" href="https://youtu.be/xFFk953VjKg"
                  class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                     <i class="fab fa-youtube"></i>
@@ -172,6 +183,17 @@
                 </span>
                 <span>Code</span>
                 </a>
+            </span>
+
+            <!-- Colab Link. -->
+            <span class="link-block">
+              <a target="_blank" href="https://colab.research.google.com/drive/1xps4Ji_Xl8-riXF9cNYfkfmFiW-UWV0j?usp=sharing"
+                class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                  <img class="icon" src="static/images/colab.png" alt="Icon">
+                </span>
+                <span>Colab</span>
+              </a>
             </span>
             </div>
           </div>
@@ -291,10 +313,11 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Scene representation has been a crucial design choice in robotic manipulation systems. An ideal representation should be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce D<sup>3</sup>Fields — dynamic 3D descriptor fields. These fields capture the dynamics of the underlying 3D environment and encode both semantic features and instance masks.
-            Specifically, we project arbitrary 3D points in the workspace onto multi-view 2D visual observations and interpolate features derived from foundational models. The resulting fused descriptor fields allow for flexible goal specifications using 2D images with varied contexts, styles, and instances.
-            To evaluate the effectiveness of these descriptor fields, we apply our representation to a wide range of robotic manipulation tasks in a zero-shot manner. Through extensive evaluation in both real-world scenarios and simulations, we demonstrate that D<sup>3</sup>Fields are both generalizable and effective for zero-shot robotic manipulation tasks.
-            In quantitative comparisons with state-of-the-art dense descriptors, such as Dense Object Nets and DINO, D<sup>3</sup>Fields exhibit significantly better generalization abilities and manipulation accuracy.
+            Scene representation is a crucial design choice in robotic manipulation systems. An ideal representation is expected to be 3D, dynamic, and semantic to meet the demands of diverse manipulation tasks. However, previous works often lack all three properties simultaneously. In this work, we introduce D<sup>3</sup>Fields — dynamic 3D descriptor fields. These fields are implicit 3D representations that take in 3D points and output semantic features and instance masks. They can also capture the dynamics of the underlying 3D environments.
+            Specifically, we project arbitrary 3D points in the workspace onto multi-view 2D visual observations and interpolate features derived from visual foundational models. The resulting fused descriptor fields allow for flexible goal specifications using 2D images with varied contexts, styles, and instances.
+            To evaluate the effectiveness of these descriptor fields, we apply our representation to rearrangement tasks in a zero-shot manner. Through extensive evaluation in real worlds and simulations, we demonstrate that D<sup>3</sup>Fields are effective for zero-shot generalizable rearrangement tasks.
+            We also compare D<sup>3</sup>Fields with state-of-the-art implicit 3D representations and show significant improvements in effectiveness and efficiency.
+          </p>
           </p>
         </div>
       </div>
@@ -310,7 +333,7 @@
     <div class="rows">
       <h2 class="title is-3">Video</h2>
       <div class="publication-video">
-        <iframe src="https://www.youtube.com/embed/yNkIOwAO3GA"
+        <iframe src="https://www.youtube.com/embed/xFFk953VjKg"
                 frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
       </div>
     </div>
