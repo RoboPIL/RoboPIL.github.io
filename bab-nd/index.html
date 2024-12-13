@@ -131,7 +131,7 @@
         </div>
         <br>
         <h2 class="subtitle has-text-centered">
-        <b>BaB-ND</b> uses branch-and-bound method to plan long-horizon trajectories using neural dynamics model.
+        <b>BaB-ND</b> employs branch-and-bound method to plan long-horizon trajectories using neural dynamics model.
         </h2>
       </div>
     </div>
@@ -164,7 +164,7 @@
                 <strong>Neural Network Verification-Inspired Algorithm Design</strong>: Our framework's key algorithm is inspired by a successful neural network verifier α,β-CROWN. We provide a novel adaptation of the neural network verification procedures for robotic planning tasks with neural dynamics models. Our work connects the efforts in both the robotics and verification communities.
               </li>
               <li>
-                <strong>Demonstrated Effectiveness in Real-world Experiments</strong>: We showcase our framework's effectiveness across a range of complex planning problems in the real world, including <strong>contact-rich manipulation</strong>, handling <strong>deformable objects</strong>, and managing <strong>object piles</strong>. We utilize diverse neural dynamics model architectures, including multilayer perceptrons (MLP) and graph neural networks (GNNs).
+                <strong>Demonstrated Effectiveness in Real-world Experiments</strong>: We showcase our framework's effectiveness across a range of complex planning problems in the real world, including <strong>contact-rich manipulation</strong>, handling <strong>deformable objects</strong>, and managing <strong>object piles</strong>. We utilize diverse neural dynamics model architectures, including multilayer perceptrons (MLPs) and graph neural networks (GNNs).
               </li>
             </ul>
           </div>
@@ -195,8 +195,18 @@
         <h2 class="title is-3">Method Overview</h2>
         <br>
         <div class="subtitle has-text-justified">
-          <p>We propose a branch-and-bound framework for long-horizon planning, involving branching, bounding, and searching. The branching procedure systematically divides the search space with a heuristic. The bounding procedure efficiently evaluates the lower bounds of objectives. The searching procedure can find high-quality solutions to objectives in sub-domains.
-          </p>
+          <p>We propose a branch-and-bound framework for long-horizon planning, involving branching, bounding, and searching.</p>
+          <ul>
+            <li>
+              The branching procedure systematically divides the search space with a heuristic. 
+            </li>
+            <li>
+              The bounding procedure efficiently evaluates the lower bounds of objectives.
+            </li> 
+            <li>
+              The searching procedure can find high-quality solutions to objectives in sub-domains.
+            </li>
+          </ul>
         </div>
         <div class="columns is-centered has-text-centered">
           <div class="column is-fullwidth">
@@ -295,99 +305,6 @@
   </div>
 </section>
 
-<!-- <section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-vcentered  is-centered">
-        <h3 class="title is-4">Object Sorting</h3>
-      </div>
-      
-      <div class="columns is-centered">
-        <div class="column">
-          <div class="content">
-            <div class="item item-sorting_1">
-              <video poster="" id="sorting_1" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/obj_pile/PR_Crown1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-        <div class="column">
-          <div class="content">
-            <div class="item item-sorting_2">
-              <video poster="" id="sorting_2" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/obj_pile/PR_Crown2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <div class="container is-max-widescreen">
-        <h3 class="title is-4">Object Merging</h3>
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-merging_1">
-              <video poster="" id="merge_1" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/merging_L/PR_Crown1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-merging_2">
-              <video poster="" id="merge_2" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/merging_L/PR_Crown2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-merging_3">
-              <video poster="" id="merge_3" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/merging_L/PR_Crown3.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <div class="container is-max-widescreen">
-        <h3 class="title is-4">Rope Routing</h3>
-        <div class="container">
-          <div id="results-carousel" class="carousel results-carousel">
-            <div class="item item-rope_1">
-              <video poster="" id="rope_1" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/rope_routing/Crown1.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-            <div class="item item-rope_2">
-              <video poster="" id="rope_2" autoplay controls muted loop playsinline height="100%">
-                <source src="./static/videos/rope_routing/Crown2.mp4"
-                        type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
 <section class="hero">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
@@ -427,22 +344,32 @@
   </div>
 </section>
 
-<!-- <p align="center">
-  <a href="https://github.com/Verified-Intelligence/alpha-beta-CROWN"><img src="https://www.huan-zhang.com/images/upload/alpha-beta-crown/logo_2022.png" width="36%"></a>
-</p> -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3">Acknowledgments</h2>
+        <br>
+        <div class="subtitle has-text-justified">
+          <p>This work is supported by Toyota Research Institute (TRI). We thank Jose Barreiros, Hongkai Dai, Aykut Onol and Mengchao Zhang for their constructive suggestions on the paper manuscript. We also thank Mingtong Zhang, Haozhe Chen, Baoyu Li and Binghao Huang for their help with real-world experiments and simulation environment development. This article reflects solely the opinions and conclusions of its authors, not those of TRI or any other Toyota entity.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>To be modified with arXiv version.
-      @inproceedings{
-      anonymous2024babnd,
-      title={BaB-{ND}: Long-Horizon Motion Planning with Branch-and-Bound and Neural Dynamics},
-      author={Anonymous},
-      booktitle={Submitted to The Thirteenth International Conference on Learning Representations},
+    <pre><code>@misc{shen2024babndlonghorizonmotionplanning,
+      title={BaB-ND: Long-Horizon Motion Planning with Branch-and-Bound and Neural Dynamics}, 
+      author={Keyi Shen and Jiangwei Yu and Huan Zhang and Yunzhu Li},
       year={2024},
-      url={https://openreview.net/forum?id=JXKFPJe0NU},
-      note={under review}}</code></pre>
+      eprint={2412.09584},
+      archivePrefix={arXiv},
+      primaryClass={cs.RO},
+      url={https://arxiv.org/abs/2412.09584}, 
+    }</code></pre>
   </div>
 </section>
 
