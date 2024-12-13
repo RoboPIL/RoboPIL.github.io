@@ -93,7 +93,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://youtu.be/QQn5MOmzI7M"
+                <a href="https://youtu.be/qXIX3YemSQ8"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -118,6 +118,8 @@
     </div>
   </div>
 </section>
+
+
 
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -145,16 +147,24 @@
         <div class="column is-full-width">
           <h2 class="title is-3">Main Contributions</h2>
           <div class="content has-text-justified">
-            <!-- We present a GPU-accelerated branch-and-bound (BaB) framework for motion planning with neural dynamics models, addressing challenges in long-horizon tasks with complex contact events. Leveraging a novel branching heuristic and modified bound propagation inspired by &alpha-&beta CROWN, our method outperforms existing approaches in contact-rich tasks like planar pushing, object sorting, and rope routing. The framework supports diverse neural architectures and scales efficiently across model sizes. Our main contributions are as follows: -->
+            <!-- We present a GPU-accelerated branch-and-bound (BaB) 
+             framework for motion planning with neural dynamics models, 
+             addressing challenges in long-horizon tasks with complex contact events. 
+             Leveraging a novel branching heuristic and modified bound propagation inspired by &alpha-&beta CROWN, 
+             our method outperforms existing approaches in contact-rich tasks like planar pushing, 
+             object sorting, and rope routing. 
+             The framework supports diverse neural architectures and scales efficiently across model sizes. 
+             Our main contributions are as follows: -->
+             Our work addresses the problem of effective <strong>motion planning</strong> over <strong>learned neural dynamics models</strong>. Existing sampling-based or gradient-descent-based approaches often fail when the planning scenario is difficult due to the underlying optimization difficulty arising from a highly nonconvex neural network dynamics model. Our main contributions are:
             <ul>
               <li>
-                <strong>General BaB-Based Framework</strong>: We propose a widely applicable branch-and-bound (BaB) framework for effective long-horizon motion planning over neural dynamics models.
+                <strong>Branch-and-Bound-Based Planning Framework</strong>: We propose a widely applicable branch-and-bound (BaB) framework for effective long-horizon motion planning over neural dynamics models. Our algorithm <strong>systematically searches</strong> the action space and outperforms existing search algorithms such as MPPI/CEM on challenging planning tasks.
               </li>
               <li>
-                <strong>Novel Procedures for Planning</strong>: Our framework introduces innovative branching, bounding, and searching methods, inspired by neural network verification algorithms, specifically adapted for planning tasks involving neural dynamics models.
+                <strong>Neural Network Verification-Inspired Algorithm Design</strong>: Our framework's key algorithm is inspired by a successful neural network verifier α,β-CROWN. We provide a novel adaptation of the neural network verification procedures for robotic planning tasks with neural dynamics models. Our work connects the efforts in both the robotics and verification communities.
               </li>
               <li>
-                <strong>Demonstrated Effectiveness and Scalability</strong>: We showcase the framework's effectiveness, applicability, and scalability across a range of complex planning problems, including contact-rich manipulation, handling deformable objects, and managing object piles, utilizing diverse model architectures.
+                <strong>Demonstrated Effectiveness in Real-world Experiments</strong>: We showcase our framework's effectiveness across a range of complex planning problems in the real world, including <strong>contact-rich manipulation</strong>, handling <strong>deformable objects</strong>, and managing <strong>object piles</strong>. We utilize diverse neural dynamics model architectures, including multilayer perceptrons (MLP) and graph neural networks (GNNs).
               </li>
             </ul>
           </div>
@@ -167,7 +177,7 @@
         <div class="column is-four-fifths">
           <h2 class="title is-3">Video</h2>
           <div class="publication-video">
-            <iframe src="https://www.youtube.com/embed/QQn5MOmzI7M"
+            <iframe src="https://www.youtube.com/embed/qXIX3YemSQ8"
                     frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
           </div>
         </div>
